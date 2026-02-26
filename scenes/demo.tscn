@@ -109,6 +109,14 @@
 [ext_resource type="Shader" uid="uid://yxmd07ffjd81" path="res://shaders/claudetoon.gdshader" id="107_k73vd"]
 [ext_resource type="Shader" uid="uid://b67yn2tvc7mdi" path="res://shaders/groktoon.gdshader" id="108_yyinu"]
 [ext_resource type="Shader" uid="uid://b2md3x8kk504f" path="res://shaders/deepseektoon.gdshader" id="109_g1wrk"]
+[ext_resource type="Shader" uid="uid://cno3mpem8ufv0" path="res://shaders/gemini_ink.gdshader" id="110_kwhll"]
+[ext_resource type="Shader" uid="uid://bkx4ru8pmf1l4" path="res://shaders/gemini_paint.gdshader" id="111_155mn"]
+[ext_resource type="Shader" uid="uid://dpb32jil4ntxy" path="res://shaders/geminiwood.gdshader" id="112_nmrt8"]
+[ext_resource type="Shader" uid="uid://vvpopc15352" path="res://shaders/texture_demo.gdshader" id="113_gc3ro"]
+[ext_resource type="Texture2D" uid="uid://dtlp8tjqqifuo" path="res://shaders/textures/laurin.jpg" id="114_tkhg2"]
+[ext_resource type="Shader" uid="uid://bygmpnnfsxop6" path="res://shaders/texturedemo.gdshader" id="114_yonga"]
+[ext_resource type="Texture2D" uid="uid://dbyivhu1px4pq" path="res://shaders/textures/fabian.JPG" id="116_sjuvy"]
+[ext_resource type="PackedScene" uid="uid://def4xv43b6dxn" path="res://scenes/tree.tscn" id="117_sjuvy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fr1sm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -198,6 +206,75 @@ shader_parameter/edge_threshold = 0.01
 shader_parameter/edge_color = Color(0, 0, 0, 1)
 shader_parameter/color_reduction = 4
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kwhll"]
+noise_type = 3
+frequency = 0.02
+fractal_type = 0
+domain_warp_enabled = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_155mn"]
+noise = SubResource("FastNoiseLite_kwhll")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_155mn"]
+render_priority = 0
+shader = ExtResource("110_kwhll")
+shader_parameter/ink_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/flow_noise = SubResource("NoiseTexture2D_155mn")
+
+[sub_resource type="SphereMesh" id="SphereMesh_155mn"]
+material = SubResource("ShaderMaterial_155mn")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gc3ro"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yonga"]
+noise = SubResource("FastNoiseLite_gc3ro")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nmrt8"]
+render_priority = 0
+shader = ExtResource("111_155mn")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_yonga")
+shader_parameter/color_1 = Color(0.1, 0.4, 0.8, 1)
+shader_parameter/color_2 = Color(0.8, 0.2, 0.5, 1)
+shader_parameter/bleed_strength = 0.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_gc3ro"]
+material = SubResource("ShaderMaterial_nmrt8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_me0e3"]
+render_priority = 0
+shader = ExtResource("112_nmrt8")
+shader_parameter/emboss_height = 0.05
+
+[sub_resource type="SphereMesh" id="SphereMesh_yonga"]
+material = SubResource("ShaderMaterial_me0e3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yonga"]
+render_priority = 0
+shader = ExtResource("113_gc3ro")
+shader_parameter/packed_texture = ExtResource("114_tkhg2")
+shader_parameter/color_a = Color(0.8, 0, 0.101960786, 1)
+shader_parameter/color_b = Color(0.9, 0.7, 0.1, 1)
+shader_parameter/bump_depth = -8.935
+shader_parameter/erosion_threshold = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_me0e3"]
+material = SubResource("ShaderMaterial_yonga")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tkhg2"]
+render_priority = 0
+shader = ExtResource("114_yonga")
+shader_parameter/texture_light = ExtResource("116_sjuvy")
+shader_parameter/texture_dark = ExtResource("114_tkhg2")
+shader_parameter/threshold = 0.5
+shader_parameter/blend_softness = 0.1
+shader_parameter/uv_scale = Vector2(1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_sjuvy"]
+material = SubResource("ShaderMaterial_tkhg2")
+
 [node name="Demo" type="Node3D" unique_id=693633326]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1637183926]
@@ -210,7 +287,7 @@ directional_shadow_mode = 1
 directional_shadow_split_1 = 0.032
 
 [node name="floor" type="MeshInstance3D" parent="." unique_id=1088670193]
-transform = Transform3D(14.723501, 0, 0, 0, 0.5384937, 0, 0, 0, 17.369766, 0.00026750565, 0.038341045, -0.036985636)
+transform = Transform3D(14.723501, 0, 0, 0, 0.5384937, 0, 0, 0, 17.369766, -0.0114302635, 0.12918091, -0.05683732)
 mesh = SubResource("BoxMesh_m0rpm")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=830867424]
@@ -576,13 +653,36 @@ mesh = SubResource("SphereMesh_kwhll")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5889564, 1.0611087, 6.8839183)
 text = "Grok"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1675843129]
+[node name="brokedeepssekshader" type="CanvasLayer" parent="." unique_id=1675843129]
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=707474428]
+[node name="ColorRect" type="ColorRect" parent="brokedeepssekshader" unique_id=707474428]
 material = SubResource("ShaderMaterial_kwhll")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2047908982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2, 7)
+mesh = SubResource("SphereMesh_155mn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=94313165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.622256, 2, 7)
+mesh = SubResource("SphereMesh_gc3ro")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2143755571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.361304, 2, 7)
+mesh = SubResource("SphereMesh_yonga")
+
+[node name="MeshInstfance3D4" type="MeshInstance3D" parent="." unique_id=1882601621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.786215, 2, 6.991459)
+mesh = SubResource("SphereMesh_me0e3")
+
+[node name="MeshInstfance3D5" type="MeshInstance3D" parent="." unique_id=943944447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.41236, 2, 6.991459)
+mesh = SubResource("SphereMesh_sjuvy")
+
+[node name="Sketchfab_Scene2" parent="." unique_id=813744874 instance=ExtResource("117_sjuvy")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 18.165224, 0, 4.261871)

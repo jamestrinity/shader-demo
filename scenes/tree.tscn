@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://def4xv43b6dxn"]
+
+[ext_resource type="PackedScene" uid="uid://de3yj7wysrfex" path="res://assets/stylized_tree.glb" id="1_avsvi"]
+[ext_resource type="Shader" uid="uid://bygmpnnfsxop6" path="res://shaders/texturedemo.gdshader" id="2_qd6xs"]
+[ext_resource type="Texture2D" uid="uid://dbyivhu1px4pq" path="res://shaders/textures/fabian.JPG" id="3_ake3r"]
+[ext_resource type="Texture2D" uid="uid://dtlp8tjqqifuo" path="res://shaders/textures/laurin.jpg" id="4_18mvg"]
+[ext_resource type="Shader" uid="uid://vvpopc15352" path="res://shaders/texture_demo.gdshader" id="5_ake3r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dmmp0"]
+render_priority = 0
+shader = ExtResource("2_qd6xs")
+shader_parameter/texture_light = ExtResource("4_18mvg")
+shader_parameter/texture_dark = ExtResource("3_ake3r")
+shader_parameter/threshold = 0.50000002375
+shader_parameter/blend_softness = 0.0
+shader_parameter/uv_scale = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_18mvg"]
+render_priority = 0
+shader = ExtResource("5_ake3r")
+shader_parameter/packed_texture = ExtResource("4_18mvg")
+shader_parameter/color_a = Color(0.8, 0.3, 0.1, 1)
+shader_parameter/color_b = Color(0.9, 0.7, 0.1, 1)
+shader_parameter/bump_depth = 2.465
+shader_parameter/erosion_threshold = 0.5
+
+[node name="Sketchfab_Scene" unique_id=813744874 instance=ExtResource("1_avsvi")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="oak 01_leafes_Mat_001_0" parent="Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01" parent_id_path=PackedInt32Array(1580019247) index="0" unique_id=1580609555]
+surface_material_override/0 = SubResource("ShaderMaterial_dmmp0")
+
+[node name="oak 01_leafes_Mat_001_02" parent="Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01" parent_id_path=PackedInt32Array(1580019247) index="1" unique_id=668661669]
+surface_material_override/0 = SubResource("ShaderMaterial_dmmp0")
+
+[node name="oak 01_001_trunk_Mat_001_0" parent="Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(1093063519) index="0" unique_id=1259965424]
+surface_material_override/0 = SubResource("ShaderMaterial_18mvg")
+
+[node name="oak 01_001_trunk_Mat_001_02" parent="Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(1093063519) index="1" unique_id=1439971215]
+surface_material_override/0 = SubResource("ShaderMaterial_18mvg")
+
+[node name="oak 01_001_trunk_Mat_001_03" parent="Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(1093063519) index="2" unique_id=1032768390]
+surface_material_override/0 = SubResource("ShaderMaterial_18mvg")
