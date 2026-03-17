@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbyivhu1px4pq"
-path.s3tc="res://.godot/imported/fabian.JPG-bd6b7ef743920b680b7ad96c22f6c9a3.s3tc.ctex"
+uid="uid://b0ltamrwqx53s"
+path.s3tc="res://.godot/imported/paint_packed.png-29dee109954834043addb0f9c0816e2d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://shaders/textures/fabian.JPG"
-dest_files=["res://.godot/imported/fabian.JPG-bd6b7ef743920b680b7ad96c22f6c9a3.s3tc.ctex"]
+source_file="res://shaders/textures/paint_packed.png"
+dest_files=["res://.godot/imported/paint_packed.png-29dee109954834043addb0f9c0816e2d.s3tc.ctex"]
 
 [params]
 
