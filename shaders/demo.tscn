@@ -251,32 +251,26 @@ shader_parameter/emboss_height = 0.05
 [sub_resource type="SphereMesh" id="SphereMesh_yonga"]
 material = SubResource("ShaderMaterial_me0e3")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3e2s7"]
-load_path = "res://.godot/imported/paint-texture.jpg-cce6f4a86dfb096c6afe04cd887e6914.s3tc.ctex"
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yonga"]
 render_priority = 0
 shader = ExtResource("113_b4nch")
-shader_parameter/packed_texture = SubResource("CompressedTexture2D_3e2s7")
 shader_parameter/color_a = Color(0.8, 0.3, 0.1, 1)
 shader_parameter/color_b = Color(0.9, 0.7, 0.1, 1)
 shader_parameter/bump_depth = 0.02
 shader_parameter/erosion_threshold = 0.5
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/enable_occlusion = true
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
 
 [sub_resource type="SphereMesh" id="SphereMesh_me0e3"]
 material = SubResource("ShaderMaterial_yonga")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lsji5"]
-load_path = "res://.godot/imported/laurin.jpg-9b9251d1cdeda9f8d22d0557ab57d6fd.s3tc.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ff35p"]
-load_path = "res://.godot/imported/fabian.JPG-bd6b7ef743920b680b7ad96c22f6c9a3.s3tc.ctex"
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tkhg2"]
 render_priority = 0
 shader = ExtResource("115_ge2r7")
-shader_parameter/texture_light = SubResource("CompressedTexture2D_ff35p")
-shader_parameter/texture_dark = SubResource("CompressedTexture2D_lsji5")
 shader_parameter/threshold = 0.5
 shader_parameter/blend_softness = 0.1
 shader_parameter/uv_scale = Vector2(1, 1)
@@ -288,9 +282,18 @@ material = SubResource("ShaderMaterial_tkhg2")
 render_priority = 0
 shader = ExtResource("118_kfydb")
 shader_parameter/albedo_texture = ExtResource("119_c0jmw")
-shader_parameter/paint_color_1 = Color(0.84705883, 0.32156864, 0, 1)
-shader_parameter/paint_color_2 = Color(0.27595773, 0.2393179, 1, 1)
+shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
+shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
 shader_parameter/bump_depth = 0.10000000149012
+shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
+shader_parameter/reflection_intensity = 1.0
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/enable_occlusion = true
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
 
 [sub_resource type="SphereMesh" id="SphereMesh_ibans"]
 material = SubResource("ShaderMaterial_krv6m")
@@ -302,9 +305,98 @@ shader_parameter/albedo_texture = ExtResource("119_c0jmw")
 shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
 shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
 shader_parameter/bump_depth = 0.10000000149012
+shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
+shader_parameter/reflection_intensity = 0.5
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/enable_occlusion = true
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
 
 [sub_resource type="BoxMesh" id="BoxMesh_76e1c"]
 material = SubResource("ShaderMaterial_1grei")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3e2s7"]
+render_priority = 0
+shader = ExtResource("118_kfydb")
+shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
+shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
+shader_parameter/bump_depth = 0.02
+shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
+shader_parameter/reflection_intensity = 0.5
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/enable_occlusion = true
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lsji5"]
+render_priority = 0
+shader = ExtResource("118_kfydb")
+shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
+shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
+shader_parameter/bump_depth = 0.02
+shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
+shader_parameter/reflection_intensity = 0.5
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/enable_occlusion = true
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ff35p"]
+render_priority = 0
+shader = ExtResource("118_kfydb")
+shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
+shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
+shader_parameter/bump_depth = 2.465
+shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
+shader_parameter/reflection_intensity = 0.5
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/enable_occlusion = true
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c0jmw"]
+render_priority = 0
+shader = ExtResource("118_kfydb")
+shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
+shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
+shader_parameter/bump_depth = 2.465
+shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
+shader_parameter/reflection_intensity = 0.5
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/enable_occlusion = true
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w2omh"]
+render_priority = 0
+shader = ExtResource("118_kfydb")
+shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
+shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
+shader_parameter/bump_depth = 2.465
+shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
+shader_parameter/reflection_intensity = 0.5
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/enable_occlusion = true
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
 
 [node name="Demo" type="Node3D" unique_id=693633326]
 
@@ -312,7 +404,7 @@ material = SubResource("ShaderMaterial_1grei")
 environment = SubResource("Environment_0bhed")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=787294679]
-transform = Transform3D(0.34128308, -0.46117714, -0.81904924, 0.17651069, -0.8244203, 0.53775024, -0.9232389, -0.32809615, -0.19995797, 0.059604645, 2.588, 0.0034942627)
+transform = Transform3D(-0.3821904, 0.7800396, 0.49544778, -0.37282768, -0.6207385, 0.68969804, 0.84553534, 0.07887946, 0.5280605, 21.033249, 2.588, 0.0034942627)
 shadow_enabled = true
 directional_shadow_mode = 1
 directional_shadow_split_1 = 0.032
@@ -716,7 +808,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.41236, 2, 6.991459)
 mesh = SubResource("SphereMesh_sjuvy")
 
 [node name="MeshInstfance3D6" type="MeshInstance3D" parent="." unique_id=692844929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.063143, 2, 6.991459)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.063143, 1.185471, 6.991459)
 mesh = SubResource("SphereMesh_ibans")
 
 [node name="MeshInstfance3D7" type="MeshInstance3D" parent="." unique_id=1489976106]
@@ -725,3 +817,23 @@ mesh = SubResource("BoxMesh_76e1c")
 
 [node name="Sketchfab_Scene2" parent="." unique_id=813744874 instance=ExtResource("119_iahig")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 18.165224, 0, 4.261871)
+
+[node name="Sketchfab_Scene3" parent="." unique_id=416247625 instance=ExtResource("119_iahig")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 24.76292, 0, 4.261871)
+
+[node name="oak 01_leafes_Mat_001_0" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01" parent_id_path=PackedInt32Array(416247625, 1580019247) index="0" unique_id=1580609555]
+surface_material_override/0 = SubResource("ShaderMaterial_3e2s7")
+
+[node name="oak 01_leafes_Mat_001_02" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01" parent_id_path=PackedInt32Array(416247625, 1580019247) index="1" unique_id=668661669]
+surface_material_override/0 = SubResource("ShaderMaterial_lsji5")
+
+[node name="oak 01_001_trunk_Mat_001_0" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(416247625, 1093063519) index="0" unique_id=1259965424]
+surface_material_override/0 = SubResource("ShaderMaterial_ff35p")
+
+[node name="oak 01_001_trunk_Mat_001_02" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(416247625, 1093063519) index="1" unique_id=1439971215]
+surface_material_override/0 = SubResource("ShaderMaterial_c0jmw")
+
+[node name="oak 01_001_trunk_Mat_001_03" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(416247625, 1093063519) index="2" unique_id=1032768390]
+surface_material_override/0 = SubResource("ShaderMaterial_w2omh")
+
+[editable path="Sketchfab_Scene3"]

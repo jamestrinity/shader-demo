@@ -9,6 +9,19 @@ uniform vec3 color_b : source_color = vec3(0.9, 0.7, 0.1);
 uniform float bump_depth = 0.02;
 uniform float erosion_threshold = 0.5;
 
+//SDF
+// Fetch the engine's internal depth buffer
+uniform sampler2D depth_texture : hint_depth_texture, filter_linear_mipmap;
+// Occlusion Controls
+uniform float occlusion_radius : hint_range(0.0, 5.0) = 1.0;
+uniform float occlusion_power : hint_range(0.1, 5.0) = 2.0;
+uniform vec3 occlusion_color : source_color = vec3(0.05, 0.05, 0.1);
+// Godot's simple equivalent to a Static Switch Parameter
+uniform bool enable_occlusion = true;
+
+uniform float erosion_min : hint_range(0.0, 1.0) = 0.25;
+uniform float erosion_max : hint_range(0.0, 1.0) = 0.5;
+
 void vertex() {
     // We assume you baked Smooth Normals into the Vertex Colors in Blender.
     // Vertex colors import from 0.0 to 1.0, so we remap them to -1.0 to 1.0 for math
@@ -58,6 +71,29 @@ void fragment() {
     // Use Alpha Scissor for hard clipping, exactly like Unreal's Masked Blend Mode
     ALPHA = 1.0 - final_mask;
     ALPHA_SCISSOR_THRESHOLD = erosion_threshold;
+// --- 3. THE GODOT OCCLUSION (Eroded Depth Fade) ---
+    if (enable_occlusion) {
+        float raw_depth = textureLod(depth_texture, SCREEN_UV, 0.0).r;
+        vec4 bg_upos = INV_PROJECTION_MATRIX * vec4(SCREEN_UV * 2.0 - 1.0, raw_depth, 1.0);
+        float bg_depth = -(bg_upos.z / bg_upos.w);
+        float surface_depth = -VERTEX.z;
+        float depth_diff = bg_depth - surface_depth;
+        
+        // 1. Calculate the base depth shadow (0.0 = deep shadow, 1.0 = no shadow)
+        float base_occlusion = clamp(depth_diff / occlusion_radius, 0.0, 1.0);
+        base_occlusion = pow(base_occlusion, occlusion_power);
+        
+        // 2. Add the Alpha channel to "erode" the shadow
+        // Because tex_sample already uses offset_uv, this automatically has Parallax depth!
+        float eroded_mask = base_occlusion + tex_sample.a;
+        
+        // 3. The "Dry Brush" Threshold (Matches Unreal's SmoothStep)
+        // This crushes the soft gradient into hard, painterly chunks
+        eroded_mask = smoothstep(erosion_min, erosion_max, eroded_mask);
+        
+        // 4. Blend the final colors
+        ALBEDO = mix(occlusion_color, ALBEDO, eroded_mask);
+    }
 }
 
 void light() {
