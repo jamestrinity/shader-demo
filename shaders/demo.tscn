@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqjsa73ev4ed5"]
 
 [ext_resource type="PackedScene" uid="uid://bxxa174b8rnf" path="res://assets/Bush_1_A_Color1.gltf" id="1_ff35p"]
+[ext_resource type="Shader" uid="uid://btst7d0ykeou2" path="res://shaders/floor.gdshader" id="1_lsji5"]
 [ext_resource type="PackedScene" uid="uid://dej1jkk7dmia8" path="res://assets/Bush_1_B_Color1.gltf" id="2_c0jmw"]
 [ext_resource type="PackedScene" uid="uid://c5cn7jotn4kg2" path="res://assets/Bush_1_C_Color1.gltf" id="3_w2omh"]
 [ext_resource type="PackedScene" uid="uid://basva8jb2w2cs" path="res://assets/Bush_1_D_Color1.gltf" id="4_06khr"]
@@ -134,11 +135,24 @@ ambient_light_color = Color(0.60784316, 0.75686276, 0.9254902, 1)
 ambient_light_sky_contribution = 0.17
 tonemap_mode = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr1sm"]
-albedo_color = Color(0.48235294, 0.47058824, 0.4745098, 1)
+[sub_resource type="Gradient" id="Gradient_lsji5"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ff35p"]
+gradient = SubResource("Gradient_lsji5")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_06khr"]
+render_priority = 0
+shader = ExtResource("1_lsji5")
+shader_parameter/base_texture = SubResource("GradientTexture1D_ff35p")
+shader_parameter/erosion_uv_scale = Vector2(5, 5)
+shader_parameter/occlusion_radius = 1.0
+shader_parameter/occlusion_power = 2.0
+shader_parameter/occlusion_color = Color(1, 0.7411765, 0.101960786, 1)
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
 
 [sub_resource type="BoxMesh" id="BoxMesh_m0rpm"]
-material = SubResource("StandardMaterial3D_fr1sm")
+material = SubResource("ShaderMaterial_06khr")
 size = Vector3(10, 1, 10)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4t00o"]
@@ -282,15 +296,15 @@ material = SubResource("ShaderMaterial_tkhg2")
 render_priority = 0
 shader = ExtResource("118_kfydb")
 shader_parameter/albedo_texture = ExtResource("119_c0jmw")
-shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
-shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
+shader_parameter/paint_color_1 = Color(1, 0, 0, 1)
+shader_parameter/paint_color_2 = Color(1, 0.2900971, 0.19750357, 1)
 shader_parameter/bump_depth = 0.10000000149012
 shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
 shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
 shader_parameter/reflection_intensity = 1.0
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
-shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/occlusion_color = Color(0.9411765, 0.050980393, 0.101960786, 1)
 shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
@@ -808,7 +822,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.41236, 2, 6.991459)
 mesh = SubResource("SphereMesh_sjuvy")
 
 [node name="MeshInstfance3D6" type="MeshInstance3D" parent="." unique_id=692844929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.063143, 1.185471, 6.991459)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.38319, 1.1784787, 6.9480214)
 mesh = SubResource("SphereMesh_ibans")
 
 [node name="MeshInstfance3D7" type="MeshInstance3D" parent="." unique_id=1489976106]

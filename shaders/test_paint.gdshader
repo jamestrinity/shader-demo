@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode specular_disabled, ambient_light_disabled;
+render_mode specular_disabled, ambient_light_disabled, blend_mix, depth_draw_opaque;
 
 uniform sampler2D albedo_texture : hint_default_black;
 
@@ -57,32 +57,48 @@ void fragment() {
     // Pass this second, pivoted normal to the light() function using CUSTOM0
     custom_spec_normal = view_spec_normal;
 	
-	// --- 3. THE GODOT OCCLUSION (Eroded Depth Fade) ---
+// --- 3. THE GODOT OCCLUSION (Corrected Depth Fade) ---
     if (enable_occlusion) {
         float raw_depth = textureLod(depth_texture, SCREEN_UV, 0.0).r;
         vec4 bg_upos = INV_PROJECTION_MATRIX * vec4(SCREEN_UV * 2.0 - 1.0, raw_depth, 1.0);
         float bg_depth = -(bg_upos.z / bg_upos.w);
         float surface_depth = -VERTEX.z;
+        
+        // How far is the background behind this surface?
         float depth_diff = bg_depth - surface_depth;
         
-        // 1. Calculate the base depth shadow (0.0 = deep shadow, 1.0 = no shadow)
-        float base_occlusion = clamp(depth_diff / occlusion_radius, 0.0, 1.0);
-        base_occlusion = pow(base_occlusion, occlusion_power);
+        // 1. Invert the mask: 1.0 = Intersecting/Touching, 0.0 = Far Away
+        float intersection = 1.0 - clamp(depth_diff / occlusion_radius, 0.0, 1.0);
         
-        // 2. Add the Alpha channel to "erode" the shadow
-        // Because tex_sample already uses offset_uv, this automatically has Parallax depth!
-        float eroded_mask = base_occlusion + tex_sample.a;
+        // 2. Shape the falloff (Matches the Power node)
+        intersection = pow(intersection, occlusion_power);
         
-        // 3. The "Dry Brush" Threshold (Matches Unreal's SmoothStep)
-        // This crushes the soft gradient into hard, painterly chunks
+        // 3. Erode with the Texture (Matches the Multiply node!)
+        // By multiplying, the shadow ONLY appears inside your thick alpha strokes
+        float eroded_mask = intersection * tex_sample.a;
+        
+        // 4. Crush the gradient into hard paint strokes (Matches SmoothStep)
         eroded_mask = smoothstep(erosion_min, erosion_max, eroded_mask);
         
-        // 4. Blend the final colors
-        ALBEDO = mix(occlusion_color, ALBEDO, eroded_mask);
+        // 5. Blend the dark occlusion color over the paint
+        // eroded_mask = 1.0 (Shadow), 0.0 (Normal Paint)
+        ALBEDO = mix(ALBEDO, occlusion_color, eroded_mask);
     }
 }
 
 void light() {
+	// --- 3. TOON DIFFUSE (This got deleted!) ---
+    float NdotL = dot(NORMAL, LIGHT);
+    float toon_intensity;
+    if (NdotL > 0.1) {
+        toon_intensity = 1.0;
+    } else if (NdotL > -0.2) {
+        toon_intensity = 0.25;
+    } else {
+        toon_intensity = 0.0;
+    }
+    DIFFUSE_LIGHT += toon_intensity * ATTENUATION * LIGHT_COLOR;
+	
    // Retrieve our pivoted normal from the fragment function
     vec3 spec_normal = normalize(custom_spec_normal);
     
