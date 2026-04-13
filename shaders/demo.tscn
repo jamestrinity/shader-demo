@@ -115,6 +115,7 @@
 [ext_resource type="Shader" uid="uid://vvpopc15352" path="res://shaders/texture_demo.gdshader" id="113_b4nch"]
 [ext_resource type="Shader" uid="uid://bygmpnnfsxop6" path="res://shaders/texturedemo.gdshader" id="115_ge2r7"]
 [ext_resource type="Shader" uid="uid://brdm2rk7i0rpw" path="res://shaders/halo.gdshader" id="115_lsji5"]
+[ext_resource type="Shader" uid="uid://d3o1pml8loixh" path="res://shaders/style_shadow.gdshader" id="118_ff35p"]
 [ext_resource type="Shader" uid="uid://bfj3k2kc5ytg7" path="res://shaders/test_paint.gdshader" id="118_kfydb"]
 [ext_resource type="Texture2D" uid="uid://b0ltamrwqx53s" path="res://shaders/textures/paint_packed.png" id="119_c0jmw"]
 [ext_resource type="PackedScene" uid="uid://def4xv43b6dxn" path="res://scenes/tree.tscn" id="119_iahig"]
@@ -278,10 +279,11 @@ material = SubResource("ShaderMaterial_tkhg2")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iw3tg"]
 render_priority = 0
 shader = ExtResource("115_lsji5")
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/inflate_amount = 0.05
+shader_parameter/inflate_amount = 0.0
 shader_parameter/outline_offset = Vector3(0.02, -0.01, 0)
-shader_parameter/ring_thickness = 0.0590000028025
+shader_parameter/ring_thickness = 0.130000006175
 shader_parameter/rim_texture_scale = 2.0
 shader_parameter/erosion_threshold = 0.8170000388075
 
@@ -302,15 +304,15 @@ render_priority = 0
 next_pass = SubResource("ShaderMaterial_06khr")
 shader = ExtResource("118_kfydb")
 shader_parameter/albedo_texture = ExtResource("119_c0jmw")
-shader_parameter/paint_color_1 = Color(1, 0, 0, 1)
-shader_parameter/paint_color_2 = Color(1, 0.2900971, 0.19750357, 1)
+shader_parameter/paint_color_1 = Color(0.33331102, 5.5952e-07, 1.2032687e-07, 1)
+shader_parameter/paint_color_2 = Color(0.42067242, 0.031973913, 0, 1)
 shader_parameter/bump_depth = 0.10000000149012
-shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/spec_color_1 = Color(0.98737425, 0.2156921, 0, 1)
 shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
-shader_parameter/reflection_intensity = 1.0
+shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
-shader_parameter/occlusion_color = Color(0.9411765, 0.050980393, 0.101960786, 1)
+shader_parameter/occlusion_color = Color(0.16522294, 0.0010134772, 0.0033477133, 1)
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
 shader_parameter/occlusion_offset = 0.0
@@ -322,6 +324,77 @@ shader_parameter/curvature_epsilon = 1e-05
 
 [sub_resource type="SphereMesh" id="SphereMesh_ibans"]
 material = SubResource("ShaderMaterial_krv6m")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r4inp"]
+render_priority = 0
+shader = ExtResource("115_lsji5")
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/inflate_amount = 0.05
+shader_parameter/outline_offset = Vector3(0.02, -0.1, 0)
+shader_parameter/ring_thickness = 0.2000000095
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/erosion_threshold = 0.818000038855
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eio4d"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_r4inp")
+shader = ExtResource("115_lsji5")
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/inflate_amount = 0.05
+shader_parameter/outline_offset = Vector3(0, 0, 0)
+shader_parameter/ring_thickness = 0.2
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/erosion_threshold = 0.8710000413725
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j5s0i"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_eio4d")
+shader = ExtResource("118_kfydb")
+shader_parameter/albedo_texture = ExtResource("119_c0jmw")
+shader_parameter/paint_color_1 = Color(1.2032688e-06, 0.3968613, 0.3968613, 1)
+shader_parameter/paint_color_2 = Color(0.08257408, 0.2931866, 0.6323796, 1)
+shader_parameter/bump_depth = 0.10000000149012
+shader_parameter/spec_color_1 = Color(0.6073655, 0.81197464, 1, 1)
+shader_parameter/spec_color_2 = Color(0.4136233, 0.7504416, 0.8524681, 1)
+shader_parameter/reflection_intensity = 0.5
+shader_parameter/occlusion_radius = 5.0
+shader_parameter/occlusion_power = 5.0
+shader_parameter/occlusion_color = Color(0.024880987, 0, 0.35373312, 1)
+shader_parameter/erosion_min = 0.25
+shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 0.0
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
+
+[sub_resource type="TorusMesh" id="TorusMesh_ungly"]
+material = SubResource("ShaderMaterial_j5s0i")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ungly"]
+render_priority = 0
+shader = ExtResource("118_ff35p")
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/shadow_size = -0.7099999862249999
+shader_parameter/noise_strength = 1.982000094145
+shader_parameter/texture_scale = Vector2(2, 2)
+
+[sub_resource type="TorusMesh" id="TorusMesh_eio4d"]
+material = SubResource("ShaderMaterial_ungly")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ser01"]
+render_priority = 0
+shader = ExtResource("118_ff35p")
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/shadow_size = -0.881999994395
+shader_parameter/noise_strength = 2.0
+shader_parameter/texture_scale = Vector2(2, 2)
+
+[sub_resource type="SphereMesh" id="SphereMesh_j5s0i"]
+material = SubResource("ShaderMaterial_ser01")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1grei"]
 render_priority = 0
@@ -453,13 +526,13 @@ shader_parameter/curvature_epsilon = 1e-05
 environment = SubResource("Environment_0bhed")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=787294679]
-transform = Transform3D(-0.3821904, 0.7800396, 0.49544778, -0.37282768, -0.6207385, 0.68969804, 0.84553534, 0.07887946, 0.5280605, 21.033249, 2.588, 0.0034942627)
+transform = Transform3D(0.63192683, 0.05359623, 0.77317274, -0.6900243, 0.49314916, 0.52978337, -0.35289505, -0.8682922, 0.34861696, 21.033249, 2.588, 4.6145296)
 shadow_enabled = true
 directional_shadow_mode = 1
 directional_shadow_split_1 = 0.032
 
 [node name="floor" type="MeshInstance3D" parent="." unique_id=1088670193]
-transform = Transform3D(14.723501, 0, 0, 0, 0.5384937, 0, 0, 0, 17.369766, -0.0114302635, 0.12918091, -0.05683732)
+transform = Transform3D(14.723501, 0, 0, 0, 0.5384937, 0, 0, 0, 17.369766, -0.009198666, 0.1345563, -0.06301522)
 mesh = SubResource("BoxMesh_m0rpm")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=830867424]
@@ -857,15 +930,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.41236, 2, 6.991459)
 mesh = SubResource("SphereMesh_sjuvy")
 
 [node name="MeshInstfance3D6" type="MeshInstance3D" parent="." unique_id=692844929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.38319, 1.7882671, 6.9480214)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.799059, 1.7882671, 6.9480214)
+cast_shadow = 0
 mesh = SubResource("SphereMesh_ibans")
+
+[node name="MeshInstfance3D9" type="MeshInstance3D" parent="." unique_id=1092393292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.22649, 1.7882671, 6.9480214)
+cast_shadow = 0
+mesh = SubResource("TorusMesh_ungly")
+
+[node name="MeshInstfance3D10" type="MeshInstance3D" parent="." unique_id=895084548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.22649, 1.7882671, 6.9480214)
+cast_shadow = 3
+mesh = SubResource("TorusMesh_eio4d")
+
+[node name="MeshInstfance3D8" type="MeshInstance3D" parent="." unique_id=324572227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.791054, 1.7882671, 6.9480214)
+cast_shadow = 3
+mesh = SubResource("SphereMesh_j5s0i")
 
 [node name="MeshInstfance3D7" type="MeshInstance3D" parent="." unique_id=1489976106]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.491123, 2, 6.991459)
 mesh = SubResource("BoxMesh_76e1c")
-
-[node name="Sketchfab_Scene2" parent="." unique_id=813744874 instance=ExtResource("119_iahig")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 18.165224, 0, 4.261871)
 
 [node name="Sketchfab_Scene3" parent="." unique_id=416247625 instance=ExtResource("119_iahig")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 24.76292, 0, 4.261871)

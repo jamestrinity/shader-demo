@@ -21,3 +21,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[shader_globals]
+
+sun_direction={
+"type": "vec3",
+"value": Vector3(0.5, -1, 0.5)
+}
