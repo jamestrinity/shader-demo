@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cqjsa73ev4ed5"]
 
 [ext_resource type="PackedScene" uid="uid://bxxa174b8rnf" path="res://assets/Bush_1_A_Color1.gltf" id="1_ff35p"]
-[ext_resource type="Shader" uid="uid://btst7d0ykeou2" path="res://shaders/floor.gdshader" id="1_lsji5"]
 [ext_resource type="PackedScene" uid="uid://dej1jkk7dmia8" path="res://assets/Bush_1_B_Color1.gltf" id="2_c0jmw"]
 [ext_resource type="PackedScene" uid="uid://c5cn7jotn4kg2" path="res://assets/Bush_1_C_Color1.gltf" id="3_w2omh"]
 [ext_resource type="PackedScene" uid="uid://basva8jb2w2cs" path="res://assets/Bush_1_D_Color1.gltf" id="4_06khr"]
@@ -115,6 +114,7 @@
 [ext_resource type="Shader" uid="uid://dpb32jil4ntxy" path="res://shaders/geminiwood.gdshader" id="112_qils1"]
 [ext_resource type="Shader" uid="uid://vvpopc15352" path="res://shaders/texture_demo.gdshader" id="113_b4nch"]
 [ext_resource type="Shader" uid="uid://bygmpnnfsxop6" path="res://shaders/texturedemo.gdshader" id="115_ge2r7"]
+[ext_resource type="Shader" uid="uid://brdm2rk7i0rpw" path="res://shaders/halo.gdshader" id="115_lsji5"]
 [ext_resource type="Shader" uid="uid://bfj3k2kc5ytg7" path="res://shaders/test_paint.gdshader" id="118_kfydb"]
 [ext_resource type="Texture2D" uid="uid://b0ltamrwqx53s" path="res://shaders/textures/paint_packed.png" id="119_c0jmw"]
 [ext_resource type="PackedScene" uid="uid://def4xv43b6dxn" path="res://scenes/tree.tscn" id="119_iahig"]
@@ -135,24 +135,7 @@ ambient_light_color = Color(0.60784316, 0.75686276, 0.9254902, 1)
 ambient_light_sky_contribution = 0.17
 tonemap_mode = 2
 
-[sub_resource type="Gradient" id="Gradient_lsji5"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_ff35p"]
-gradient = SubResource("Gradient_lsji5")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_06khr"]
-render_priority = 0
-shader = ExtResource("1_lsji5")
-shader_parameter/base_texture = SubResource("GradientTexture1D_ff35p")
-shader_parameter/erosion_uv_scale = Vector2(5, 5)
-shader_parameter/occlusion_radius = 1.0
-shader_parameter/occlusion_power = 2.0
-shader_parameter/occlusion_color = Color(1, 0.7411765, 0.101960786, 1)
-shader_parameter/erosion_min = 0.25
-shader_parameter/erosion_max = 0.5
-
 [sub_resource type="BoxMesh" id="BoxMesh_m0rpm"]
-material = SubResource("ShaderMaterial_06khr")
 size = Vector3(10, 1, 10)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4t00o"]
@@ -292,8 +275,31 @@ shader_parameter/uv_scale = Vector2(1, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_sjuvy"]
 material = SubResource("ShaderMaterial_tkhg2")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iw3tg"]
+render_priority = 0
+shader = ExtResource("115_lsji5")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/inflate_amount = 0.05
+shader_parameter/outline_offset = Vector3(0.02, -0.01, 0)
+shader_parameter/ring_thickness = 0.0590000028025
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/erosion_threshold = 0.8170000388075
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_06khr"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_iw3tg")
+shader = ExtResource("115_lsji5")
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/inflate_amount = 0.0330000015675
+shader_parameter/outline_offset = Vector3(0, 0, 0)
+shader_parameter/ring_thickness = 0.1550000073625
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/erosion_threshold = 0.6690000317775
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_krv6m"]
 render_priority = 0
+next_pass = SubResource("ShaderMaterial_06khr")
 shader = ExtResource("118_kfydb")
 shader_parameter/albedo_texture = ExtResource("119_c0jmw")
 shader_parameter/paint_color_1 = Color(1, 0, 0, 1)
@@ -305,9 +311,14 @@ shader_parameter/reflection_intensity = 1.0
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.9411765, 0.050980393, 0.101960786, 1)
-shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 0.0
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
 
 [sub_resource type="SphereMesh" id="SphereMesh_ibans"]
 material = SubResource("ShaderMaterial_krv6m")
@@ -316,8 +327,8 @@ material = SubResource("ShaderMaterial_krv6m")
 render_priority = 0
 shader = ExtResource("118_kfydb")
 shader_parameter/albedo_texture = ExtResource("119_c0jmw")
-shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
-shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
+shader_parameter/paint_color_1 = Color(0.39184618, 0.4686892, 0.46909565, 1)
+shader_parameter/paint_color_2 = Color(0.09563463, 0.13480434, 0.13485238, 1)
 shader_parameter/bump_depth = 0.10000000149012
 shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
 shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
@@ -325,9 +336,13 @@ shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 1.0
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
 
 [sub_resource type="BoxMesh" id="BoxMesh_76e1c"]
 material = SubResource("ShaderMaterial_1grei")
@@ -344,9 +359,13 @@ shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 1.0
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lsji5"]
 render_priority = 0
@@ -360,9 +379,13 @@ shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 1.0
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ff35p"]
 render_priority = 0
@@ -376,9 +399,13 @@ shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 1.0
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c0jmw"]
 render_priority = 0
@@ -392,9 +419,13 @@ shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 1.0
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w2omh"]
 render_priority = 0
@@ -408,9 +439,13 @@ shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 1.0
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
 
 [node name="Demo" type="Node3D" unique_id=693633326]
 
@@ -822,11 +857,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.41236, 2, 6.991459)
 mesh = SubResource("SphereMesh_sjuvy")
 
 [node name="MeshInstfance3D6" type="MeshInstance3D" parent="." unique_id=692844929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.38319, 1.1784787, 6.9480214)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.38319, 1.7882671, 6.9480214)
 mesh = SubResource("SphereMesh_ibans")
 
 [node name="MeshInstfance3D7" type="MeshInstance3D" parent="." unique_id=1489976106]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.526775, 2, 6.991459)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.491123, 2, 6.991459)
 mesh = SubResource("BoxMesh_76e1c")
 
 [node name="Sketchfab_Scene2" parent="." unique_id=813744874 instance=ExtResource("119_iahig")]

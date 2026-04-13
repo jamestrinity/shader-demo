@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode specular_disabled, ambient_light_disabled, blend_mix, depth_draw_opaque;
+render_mode specular_disabled, ambient_light_disabled, blend_mix, depth_draw_opaque, depth_prepass_alpha;
 
 uniform sampler2D albedo_texture : hint_default_black;
 
@@ -23,13 +23,22 @@ uniform float occlusion_radius : hint_range(0.0, 5.0) = 1.0;
 uniform float occlusion_power : hint_range(0.1, 5.0) = 2.0;
 uniform vec3 occlusion_color : source_color = vec3(0.05, 0.05, 0.1);
 
-// Godot's simple equivalent to a Static Switch Parameter
-uniform bool enable_occlusion = true;
-
 uniform float erosion_min : hint_range(0.0, 1.0) = 0.25;
 uniform float erosion_max : hint_range(0.0, 1.0) = 0.5;
+uniform float occlusion_offset = 0.0;
+
+uniform sampler2D erosion_texture : hint_default_black;
+
+// Rim Erosion Controls
+uniform float rim_texture_scale = 2.0;
+uniform float rim_power = 5.0;
+uniform float rim_threshold = 0.05;
+uniform float curvature_epsilon = 0.00001;
 
 void fragment() {
+    // --- THE FIX 1: Capture the smooth geometry normal BEFORE we apply the bumpy normal map ---
+    vec3 smooth_mesh_normal = NORMAL;
+
     // --- 1. BUMP OFFSET & DIFFUSE NORMAL ---
     vec3 tan_view = vec3(dot(VIEW, TANGENT), dot(VIEW, BINORMAL), dot(VIEW, NORMAL));
     float initial_height = texture(albedo_texture, UV).b;
@@ -40,50 +49,46 @@ void fragment() {
     
     vec2 unpacked_normal = (tex_sample.rg * 2.0) - 1.0;
     vec3 tangent_normal = normalize(vec3(unpacked_normal, 0.95));
-    NORMAL = normalize(mat3(TANGENT, BINORMAL, NORMAL) * tangent_normal);
+    
+     NORMAL = normalize(mat3(TANGENT, BINORMAL, NORMAL) * tangent_normal);
 
     // --- 2. THE PIVOTED SPECULAR NORMAL ---
-    // Swizzle the UVs (YX) to break up the pattern, applying the same bump offset
     vec2 pivoted_uv = UV.yx - (tan_view.xy * initial_height * bump_depth);
-    
-    // Sample the normal map again with the swizzled UVs
     vec2 raw_spec_normal = texture(albedo_texture, pivoted_uv).rg;
     vec2 unpacked_spec = (raw_spec_normal * 2.0) - 1.0;
     vec3 tan_spec_normal = normalize(vec3(unpacked_spec, 0.95));
+    custom_spec_normal = normalize(mat3(TANGENT, BINORMAL, NORMAL) * tan_spec_normal);
     
-    // Transform to View Space
-    vec3 view_spec_normal = normalize(mat3(TANGENT, BINORMAL, NORMAL) * tan_spec_normal);
+    // --- 3. RIM EROSION (Masked Silhouette) ---
+    // Use the smooth normal we saved at the top, NOT the bumpy one!
+    vec3 working_normal = smooth_mesh_normal;
+
+    // THE FIX 2: Use SCREEN_UV to prevent negative coordinates on the left side of the screen
+    vec2 view_uv = SCREEN_UV * rim_texture_scale;
     
-    // Pass this second, pivoted normal to the light() function using CUSTOM0
-    custom_spec_normal = view_spec_normal;
-	
-// --- 3. THE GODOT OCCLUSION (Corrected Depth Fade) ---
-    if (enable_occlusion) {
-        float raw_depth = textureLod(depth_texture, SCREEN_UV, 0.0).r;
-        vec4 bg_upos = INV_PROJECTION_MATRIX * vec4(SCREEN_UV * 2.0 - 1.0, raw_depth, 1.0);
-        float bg_depth = -(bg_upos.z / bg_upos.w);
-        float surface_depth = -VERTEX.z;
-        
-        // How far is the background behind this surface?
-        float depth_diff = bg_depth - surface_depth;
-        
-        // 1. Invert the mask: 1.0 = Intersecting/Touching, 0.0 = Far Away
-        float intersection = 1.0 - clamp(depth_diff / occlusion_radius, 0.0, 1.0);
-        
-        // 2. Shape the falloff (Matches the Power node)
-        intersection = pow(intersection, occlusion_power);
-        
-        // 3. Erode with the Texture (Matches the Multiply node!)
-        // By multiplying, the shadow ONLY appears inside your thick alpha strokes
-        float eroded_mask = intersection * tex_sample.a;
-        
-        // 4. Crush the gradient into hard paint strokes (Matches SmoothStep)
-        eroded_mask = smoothstep(erosion_min, erosion_max, eroded_mask);
-        
-        // 5. Blend the dark occlusion color over the paint
-        // eroded_mask = 1.0 (Shadow), 0.0 (Normal Paint)
-        ALBEDO = mix(ALBEDO, occlusion_color, eroded_mask);
-    }
+    // Make sure you have a uniform sampler2D erosion_texture; declared at the top of your script!
+    float rim_tex = texture(erosion_texture, view_uv).r; 
+    
+    // Calculate Fresnel (0.0 at center, 1.0 at edges)
+    float view_dot = dot(VIEW, working_normal);
+    float fresnel = clamp(1.0 - view_dot, 0.0, 1.0);
+    
+    // Curvature Filter (Checks if geometry is actually curved)
+    vec3 ddx_n = dFdx(working_normal);
+    vec3 ddy_n = dFdy(working_normal);
+    vec3 curv_vec = abs(ddx_n) + abs(ddy_n);
+    float curvature = curv_vec.x + curv_vec.y + curv_vec.z;
+    float is_curved = ceil(curvature - curvature_epsilon); 
+    
+    // Calculate final mask
+    float rim_math = pow(fresnel * rim_tex, rim_power);
+    float rim_mask = step(rim_threshold, rim_math);
+    
+    // Multiply by curvature to protect flat faces
+    float final_rim_mask = rim_mask * is_curved;
+    
+    // Cut the geometry! 
+    ALPHA = 1.0 - final_rim_mask;
 }
 
 void light() {

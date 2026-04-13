@@ -3,26 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0ltamrwqx53s"
-path.s3tc="res://.godot/imported/paint_packed.png-29dee109954834043addb0f9c0816e2d.s3tc.ctex"
+path="res://.godot/imported/paint_packed.png-29dee109954834043addb0f9c0816e2d.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://shaders/textures/paint_packed.png"
-dest_files=["res://.godot/imported/paint_packed.png-29dee109954834043addb0f9c0816e2d.s3tc.ctex"]
+dest_files=["res://.godot/imported/paint_packed.png-29dee109954834043addb0f9c0816e2d.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
@@ -32,7 +31,7 @@ process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
 process/channel_remap/alpha=3
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
