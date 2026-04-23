@@ -3,6 +3,12 @@ render_mode specular_disabled, ambient_light_disabled, blend_mix, depth_draw_opa
 
 uniform sampler2D albedo_texture : hint_default_black;
 
+// Glass Controls
+uniform float glass_opacity : hint_range(0.0, 1.0) = 0.8;
+
+// Geometry Toggle
+uniform bool is_sharp_geometry = false; // Check this box for Cubes/Cylinders!
+
 // Diffuse Colors
 uniform vec4 paint_color_1 : source_color = vec4(0.8, 0.85, 0.85, 1.0);
 uniform vec4 paint_color_2 : source_color = vec4(0.4, 0.5, 0.5, 1.0);
@@ -60,13 +66,18 @@ void fragment() {
     custom_spec_normal = normalize(mat3(TANGENT, BINORMAL, NORMAL) * tan_spec_normal);
     
     // --- 3. RIM EROSION (Masked Silhouette) ---
-    // Use the smooth normal we saved at the top, NOT the bumpy one!
-    vec3 working_normal = smooth_mesh_normal;
-
-    // THE FIX 2: Use SCREEN_UV to prevent negative coordinates on the left side of the screen
-    vec2 view_uv = SCREEN_UV * rim_texture_scale;
+    vec3 working_normal;
     
-    // Make sure you have a uniform sampler2D erosion_texture; declared at the top of your script!
+    if (is_sharp_geometry) {
+        // CUBE MODE: Unpack the fake "smooth" normal from the vertex colors
+        working_normal = normalize((COLOR.rgb * 2.0) - 1.0);
+    } else {
+        // SPHERE MODE: Use the actual smooth mesh normal
+        working_normal = smooth_mesh_normal; 
+    }
+
+    // [The rest of your Rim Erosion code stays exactly the same!]
+    vec2 view_uv = SCREEN_UV * rim_texture_scale;
     float rim_tex = texture(erosion_texture, view_uv).r; 
     
     // Calculate Fresnel (0.0 at center, 1.0 at edges)
@@ -80,15 +91,33 @@ void fragment() {
     float curvature = curv_vec.x + curv_vec.y + curv_vec.z;
     float is_curved = ceil(curvature - curvature_epsilon); 
     
-    // Calculate final mask
+	
+	// 4. Calculate the Erosion Mask
     float rim_math = pow(fresnel * rim_tex, rim_power);
     float rim_mask = step(rim_threshold, rim_math);
     
     // Multiply by curvature to protect flat faces
     float final_rim_mask = rim_mask * is_curved;
     
-    // Cut the geometry! 
-    ALPHA = 1.0 - final_rim_mask;
+    // 5. THE FIX: Pure Alpha Blending!
+    // (Ensure you DELETED the ALPHA_SCISSOR_THRESHOLD line!)
+    
+    // First, we cut out the chunks for the rim erosion (1.0 is solid, 0.0 is deleted)
+    float eroded_geometry = 1.0 - final_rim_mask;
+    
+    // Then, we multiply the remaining paint by your opacity slider
+    ALPHA = eroded_geometry * glass_opacity;
+    //// Calculate final mask
+    //float rim_math = pow(fresnel * rim_tex, rim_power);
+    //float rim_mask = step(rim_threshold, rim_math);
+    //
+    //// Multiply by curvature to protect flat faces
+    //float final_rim_mask = rim_mask * is_curved;
+    //
+    //// Cut the geometry! 
+    //ALPHA = 1.0 - final_rim_mask;
+	
+	
 }
 
 void light() {

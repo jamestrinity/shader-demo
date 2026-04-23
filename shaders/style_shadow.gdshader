@@ -3,6 +3,7 @@ render_mode depth_draw_opaque, cull_disabled;
 
 uniform sampler2D erosion_texture : hint_default_white, filter_linear_mipmap;
 
+
 // Shadow Controls
 uniform float shadow_size : hint_range(-1.0, 1.0) = 0.0;
 uniform float noise_strength : hint_range(0.0, 2.0) = 0.8;

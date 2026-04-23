@@ -11,6 +11,9 @@ uniform vec3 outline_offset = vec3(0.0, 0.0, 0.0);
 // NEW: Ring Thickness Control
 uniform float ring_thickness : hint_range(0.0, 1.0) = 0.2;
 
+// Geometry Toggle
+uniform bool is_sharp_geometry = false;
+
 // Erosion Controls
 uniform float rim_texture_scale = 2.0;
 uniform float erosion_threshold : hint_range(0.0, 1.0) = 0.5;
@@ -20,8 +23,18 @@ uniform float erosion_threshold : hint_range(0.0, 1.0) = 0.5;
 varying vec3 mesh_normal;
 
 void vertex() {
-    // We only do the inflation and offset here now
-    VERTEX += NORMAL * inflate_amount;
+    vec3 inflate_normal;
+    
+    if (is_sharp_geometry) {
+        // CUBE MODE: Inflate using the fake smooth vertex colors to keep corners attached
+        inflate_normal = normalize((COLOR.rgb * 2.0) - 1.0);
+    } else {
+        // SPHERE MODE: Inflate normally
+        inflate_normal = NORMAL;
+    }
+    
+    // Inflate and Offset
+    VERTEX += inflate_normal * inflate_amount;
     VERTEX += outline_offset;
 }
 

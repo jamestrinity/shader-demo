@@ -1,124 +1,9 @@
 [gd_scene format=3 uid="uid://cqjsa73ev4ed5"]
 
-[ext_resource type="PackedScene" uid="uid://bxxa174b8rnf" path="res://assets/Bush_1_A_Color1.gltf" id="1_ff35p"]
-[ext_resource type="PackedScene" uid="uid://dej1jkk7dmia8" path="res://assets/Bush_1_B_Color1.gltf" id="2_c0jmw"]
-[ext_resource type="PackedScene" uid="uid://c5cn7jotn4kg2" path="res://assets/Bush_1_C_Color1.gltf" id="3_w2omh"]
-[ext_resource type="PackedScene" uid="uid://basva8jb2w2cs" path="res://assets/Bush_1_D_Color1.gltf" id="4_06khr"]
-[ext_resource type="PackedScene" uid="uid://bduy7vtoq3ofk" path="res://assets/Bush_1_E_Color1.gltf" id="5_iw3tg"]
-[ext_resource type="PackedScene" uid="uid://dv2q6u0ugvpad" path="res://assets/Bush_1_F_Color1.gltf" id="6_ser01"]
-[ext_resource type="PackedScene" uid="uid://cpy15jopd2m0" path="res://assets/Bush_1_G_Color1.gltf" id="7_j5s0i"]
-[ext_resource type="PackedScene" uid="uid://coosuabx74f53" path="res://assets/Bush_2_A_Color1.gltf" id="8_ungly"]
-[ext_resource type="PackedScene" uid="uid://bihy4qjcu8gnl" path="res://assets/Bush_2_B_Color1.gltf" id="9_eio4d"]
-[ext_resource type="PackedScene" uid="uid://c7fmjjr1g6hbv" path="res://assets/Bush_2_C_Color1.gltf" id="10_r4inp"]
-[ext_resource type="PackedScene" uid="uid://bb4poa71akisp" path="res://assets/Bush_2_D_Color1.gltf" id="11_bh7e2"]
-[ext_resource type="PackedScene" uid="uid://dho2j1n7npjqq" path="res://assets/Bush_2_E_Color1.gltf" id="12_70f2i"]
-[ext_resource type="PackedScene" uid="uid://4110i41irjsp" path="res://assets/Bush_2_F_Color1.gltf" id="13_86t5n"]
-[ext_resource type="PackedScene" uid="uid://q72x0xn1phlf" path="res://assets/Bush_3_A_Color1.gltf" id="14_spioy"]
-[ext_resource type="PackedScene" uid="uid://cxda2fqxcrhl7" path="res://assets/Bush_3_B_Color1.gltf" id="15_huhib"]
-[ext_resource type="PackedScene" uid="uid://bwn8kpb475i1p" path="res://assets/Bush_3_C_Color1.gltf" id="16_xhjcu"]
-[ext_resource type="PackedScene" uid="uid://kb5b7w285csi" path="res://assets/Bush_4_A_Color1.gltf" id="17_pp3oo"]
-[ext_resource type="PackedScene" uid="uid://d2k30jbi5r5u" path="res://assets/Bush_4_B_Color1.gltf" id="18_i6jf4"]
-[ext_resource type="PackedScene" uid="uid://fit06c735g7s" path="res://assets/Bush_4_C_Color1.gltf" id="19_2op4w"]
-[ext_resource type="PackedScene" uid="uid://dyvdy1s46gfvd" path="res://assets/Bush_4_D_Color1.gltf" id="20_xa58o"]
-[ext_resource type="PackedScene" uid="uid://jo840c4b7b3v" path="res://assets/Bush_4_E_Color1.gltf" id="21_3glh0"]
-[ext_resource type="PackedScene" uid="uid://b3pg7hbx7fcjq" path="res://assets/Bush_4_F_Color1.gltf" id="22_r80h8"]
-[ext_resource type="PackedScene" uid="uid://dn2p3rs3yjkmg" path="res://assets/Grass_1_A_Color1.gltf" id="23_jh2pl"]
-[ext_resource type="PackedScene" uid="uid://2t44meoyxrjf" path="res://assets/Grass_1_A_Singlesided_Color1.gltf" id="24_nsstm"]
-[ext_resource type="PackedScene" uid="uid://kjijqfaevoaf" path="res://assets/Grass_1_B_Color1.gltf" id="25_x0vs4"]
-[ext_resource type="PackedScene" uid="uid://hmrse3uk31or" path="res://assets/Grass_1_B_Singlesided_Color1.gltf" id="26_s1pg1"]
-[ext_resource type="PackedScene" uid="uid://cc382uvri2ye1" path="res://assets/Grass_1_C_Color1.gltf" id="27_kopsx"]
-[ext_resource type="PackedScene" uid="uid://dahaegwtmm216" path="res://assets/Grass_1_C_Singlesided_Color1.gltf" id="28_qt0rt"]
-[ext_resource type="PackedScene" uid="uid://d1g3avau0rsjv" path="res://assets/Grass_1_D_Color1.gltf" id="29_tqdb8"]
-[ext_resource type="PackedScene" uid="uid://bm71xvgra4ei6" path="res://assets/Grass_1_D_Singlesided_Color1.gltf" id="30_npt2p"]
-[ext_resource type="PackedScene" uid="uid://cqbnb77txtbq" path="res://assets/Grass_1_Mesh.gltf" id="31_4j3p0"]
-[ext_resource type="PackedScene" uid="uid://c00wdtekfowjy" path="res://assets/Grass_1_SingleSided_Mesh.gltf" id="32_kk5ht"]
-[ext_resource type="PackedScene" uid="uid://c0dlxpc6a2oqk" path="res://assets/Grass_2_A_Color1.gltf" id="33_7mnvs"]
-[ext_resource type="PackedScene" uid="uid://b8c2ye2tgjasm" path="res://assets/Grass_2_A_Singlesided_Color1.gltf" id="34_xwaop"]
-[ext_resource type="PackedScene" uid="uid://bdsbjvuyl17pe" path="res://assets/Grass_2_B_Color1.gltf" id="35_1i7y5"]
-[ext_resource type="PackedScene" uid="uid://dg2qtffoicaso" path="res://assets/Grass_2_B_Singlesided_Color1.gltf" id="36_khvxo"]
-[ext_resource type="PackedScene" uid="uid://cwth8kedu5cid" path="res://assets/Grass_2_C_Color1.gltf" id="37_4vnbs"]
-[ext_resource type="PackedScene" uid="uid://ddfldnohctkcn" path="res://assets/Grass_2_C_Singlesided_Color1.gltf" id="38_10f00"]
-[ext_resource type="PackedScene" uid="uid://dyc6rf2716sty" path="res://assets/Grass_2_D_Color1.gltf" id="39_onbtf"]
-[ext_resource type="PackedScene" uid="uid://desa8uie6tsl8" path="res://assets/Grass_2_D_Singlesided_Color1.gltf" id="40_3wrvm"]
-[ext_resource type="PackedScene" uid="uid://clbopsjnkkjk0" path="res://assets/Grass_2_Mesh.gltf" id="41_tkwvf"]
-[ext_resource type="PackedScene" uid="uid://cntyqb513fcsj" path="res://assets/Grass_2_SingleSided_Mesh.gltf" id="42_hyfdr"]
-[ext_resource type="PackedScene" uid="uid://cv5tjwjoqd437" path="res://assets/Rock_1_A_Color1.gltf" id="43_ft0ti"]
-[ext_resource type="PackedScene" uid="uid://dqvqob4lrg34c" path="res://assets/Rock_1_B_Color1.gltf" id="44_k5mna"]
-[ext_resource type="PackedScene" uid="uid://cl3spxwxisju" path="res://assets/Rock_1_C_Color1.gltf" id="45_h4a0t"]
-[ext_resource type="PackedScene" uid="uid://do413gppp11fc" path="res://assets/Rock_1_D_Color1.gltf" id="46_egl62"]
-[ext_resource type="PackedScene" uid="uid://bebexenbrpciq" path="res://assets/Rock_1_E_Color1.gltf" id="47_kud4m"]
-[ext_resource type="PackedScene" uid="uid://bp3o7teslpx12" path="res://assets/Rock_1_F_Color1.gltf" id="48_h1wid"]
-[ext_resource type="PackedScene" uid="uid://ch6weemxf77yx" path="res://assets/Rock_1_G_Color1.gltf" id="49_v0cg6"]
-[ext_resource type="PackedScene" uid="uid://dbsfi6mcd4v7a" path="res://assets/Rock_1_H_Color1.gltf" id="50_skpwj"]
-[ext_resource type="PackedScene" uid="uid://dhp4yhx8dfsan" path="res://assets/Rock_1_I_Color1.gltf" id="51_oevim"]
-[ext_resource type="PackedScene" uid="uid://bv1h2gqeds0wu" path="res://assets/Rock_1_J_Color1.gltf" id="52_5go0h"]
-[ext_resource type="PackedScene" uid="uid://8uh3ytncf6it" path="res://assets/Rock_1_K_Color1.gltf" id="53_322w2"]
-[ext_resource type="PackedScene" uid="uid://bgfotkowfr307" path="res://assets/Rock_1_L_Color1.gltf" id="54_qwx71"]
-[ext_resource type="PackedScene" uid="uid://dcht3vuuqf4s2" path="res://assets/Rock_1_M_Color1.gltf" id="55_xluqv"]
-[ext_resource type="PackedScene" uid="uid://8b3v8vxf6xnu" path="res://assets/Rock_1_N_Color1.gltf" id="56_6lmj5"]
-[ext_resource type="PackedScene" uid="uid://duis5pxpx13vx" path="res://assets/Rock_1_O_Color1.gltf" id="57_s1lf2"]
-[ext_resource type="PackedScene" uid="uid://c6uhqxtfucvuy" path="res://assets/Rock_1_P_Color1.gltf" id="58_fxf6s"]
-[ext_resource type="PackedScene" uid="uid://bukr7wobocuyq" path="res://assets/Rock_1_Q_Color1.gltf" id="59_18yj3"]
-[ext_resource type="PackedScene" uid="uid://p7j7c313qbsv" path="res://assets/Rock_2_A_Color1.gltf" id="60_me30b"]
-[ext_resource type="PackedScene" uid="uid://das8e1hqj6he" path="res://assets/Rock_2_B_Color1.gltf" id="61_1qb7a"]
-[ext_resource type="PackedScene" uid="uid://efum0oq2xxep" path="res://assets/Rock_2_C_Color1.gltf" id="62_fj71k"]
-[ext_resource type="PackedScene" uid="uid://4poy7bpovv4r" path="res://assets/Rock_2_D_Color1.gltf" id="63_wluon"]
-[ext_resource type="PackedScene" uid="uid://du3lbkce3ewsq" path="res://assets/Rock_2_E_Color1.gltf" id="64_xso0c"]
-[ext_resource type="PackedScene" uid="uid://bgt0bea0e1sf6" path="res://assets/Rock_2_F_Color1.gltf" id="65_8timj"]
-[ext_resource type="PackedScene" uid="uid://bc4dlmnknknuf" path="res://assets/Rock_2_G_Color1.gltf" id="66_t82t0"]
-[ext_resource type="PackedScene" uid="uid://ebxg3fqmxevb" path="res://assets/Rock_2_H_Color1.gltf" id="67_jt7vt"]
-[ext_resource type="PackedScene" uid="uid://bs8ji753vovrl" path="res://assets/Rock_3_A_Color1.gltf" id="68_m23un"]
-[ext_resource type="PackedScene" uid="uid://d10eiywjdd26h" path="res://assets/Rock_3_B_Color1.gltf" id="69_020h2"]
-[ext_resource type="PackedScene" uid="uid://b8kkyam1cvbft" path="res://assets/Rock_3_C_Color1.gltf" id="70_fqh4x"]
-[ext_resource type="PackedScene" uid="uid://cvm1g4asvb51g" path="res://assets/Rock_3_D_Color1.gltf" id="71_qi1wk"]
-[ext_resource type="PackedScene" uid="uid://cqvmhfvuxa0ig" path="res://assets/Rock_3_E_Color1.gltf" id="72_mobdm"]
-[ext_resource type="PackedScene" uid="uid://dbxvwetkm3q1i" path="res://assets/Rock_3_F_Color1.gltf" id="73_ktdl5"]
-[ext_resource type="PackedScene" uid="uid://cmm0e7ojisncl" path="res://assets/Rock_3_G_Color1.gltf" id="74_ely3y"]
-[ext_resource type="PackedScene" uid="uid://djsxukwwmcpmr" path="res://assets/Rock_3_H_Color1.gltf" id="75_tffsd"]
-[ext_resource type="PackedScene" uid="uid://drb51y8d537ab" path="res://assets/Rock_3_I_Color1.gltf" id="76_rvxn7"]
-[ext_resource type="PackedScene" uid="uid://dkbsyx31xsq5i" path="res://assets/Rock_3_J_Color1.gltf" id="77_qiv7w"]
-[ext_resource type="PackedScene" uid="uid://dgfp30d6jy3r7" path="res://assets/Rock_3_K_Color1.gltf" id="78_aglsr"]
-[ext_resource type="PackedScene" uid="uid://dca00d7o48b35" path="res://assets/Rock_3_L_Color1.gltf" id="79_knsex"]
-[ext_resource type="PackedScene" uid="uid://dn5hehrli06ob" path="res://assets/Rock_3_M_Color1.gltf" id="80_r4rt8"]
-[ext_resource type="PackedScene" uid="uid://cx0vej36g7bh5" path="res://assets/Rock_3_N_Color1.gltf" id="81_s12he"]
-[ext_resource type="PackedScene" uid="uid://hgjl0arhokf2" path="res://assets/Rock_3_O_Color1.gltf" id="82_ooboh"]
-[ext_resource type="PackedScene" uid="uid://cpd2w67crr3yw" path="res://assets/Rock_3_P_Color1.gltf" id="83_1p6oa"]
-[ext_resource type="PackedScene" uid="uid://ds72ohssg7ejj" path="res://assets/Rock_3_Q_Color1.gltf" id="84_ihewe"]
-[ext_resource type="PackedScene" uid="uid://dt3x8dguv415j" path="res://assets/Rock_3_R_Color1.gltf" id="85_xpdr1"]
-[ext_resource type="PackedScene" uid="uid://cx7fbkmy70tyo" path="res://assets/Tree_1_A_Color1.gltf" id="86_ufblq"]
-[ext_resource type="PackedScene" uid="uid://vjj6vwl2oo0s" path="res://assets/Tree_1_B_Color1.gltf" id="87_1rff7"]
-[ext_resource type="PackedScene" uid="uid://bqsyd4py6gxqe" path="res://assets/Tree_1_C_Color1.gltf" id="88_4x6af"]
-[ext_resource type="PackedScene" uid="uid://bx2wa244d6hnj" path="res://assets/Tree_2_A_Color1.gltf" id="89_6uh7x"]
-[ext_resource type="PackedScene" uid="uid://defn2xytdfstx" path="res://assets/Tree_2_B_Color1.gltf" id="90_p0am2"]
-[ext_resource type="PackedScene" uid="uid://8ek83yefeoo8" path="res://assets/Tree_2_C_Color1.gltf" id="91_7csys"]
-[ext_resource type="PackedScene" uid="uid://3ehep6vq6dm8" path="res://assets/Tree_2_D_Color1.gltf" id="92_jeln0"]
-[ext_resource type="PackedScene" uid="uid://bl7vx56r1rtwl" path="res://assets/Tree_2_E_Color1.gltf" id="93_6pxwx"]
-[ext_resource type="PackedScene" uid="uid://bfwqy6q2xs0na" path="res://assets/Tree_3_A_Color1.gltf" id="94_scxxp"]
-[ext_resource type="PackedScene" uid="uid://byq7iqemsrf8g" path="res://assets/Tree_3_B_Color1.gltf" id="95_kux2h"]
-[ext_resource type="PackedScene" uid="uid://h116k8s5u0xc" path="res://assets/Tree_3_C_Color1.gltf" id="96_fbafy"]
-[ext_resource type="PackedScene" uid="uid://b3ee1ffwdsdrp" path="res://assets/Tree_4_A_Color1.gltf" id="97_bpc38"]
-[ext_resource type="PackedScene" uid="uid://pmwwbwrvu17a" path="res://assets/Tree_4_B_Color1.gltf" id="98_b4wof"]
-[ext_resource type="PackedScene" uid="uid://c03jm342jy28c" path="res://assets/Tree_4_C_Color1.gltf" id="99_b7snm"]
-[ext_resource type="PackedScene" uid="uid://k1xsnbaxni5w" path="res://assets/Tree_Bare_1_A_Color1.gltf" id="100_gye5b"]
-[ext_resource type="PackedScene" uid="uid://lyfpwmiixe24" path="res://assets/Tree_Bare_1_B_Color1.gltf" id="101_seew0"]
-[ext_resource type="PackedScene" uid="uid://bjpk1vhemp3sa" path="res://assets/Tree_Bare_1_C_Color1.gltf" id="102_tffc4"]
-[ext_resource type="PackedScene" uid="uid://c4ag3k5i4fpa0" path="res://assets/Tree_Bare_2_A_Color1.gltf" id="103_3rib0"]
-[ext_resource type="PackedScene" uid="uid://d30t6gxivjo55" path="res://assets/Tree_Bare_2_B_Color1.gltf" id="104_djhch"]
-[ext_resource type="Shader" uid="uid://btqwgm4ym2wel" path="res://shaders/geminitoon.gdshader" id="105_0enbf"]
-[ext_resource type="Shader" uid="uid://37jfgnlfm65q" path="res://shaders/chattoon.gdshader" id="106_qbofj"]
-[ext_resource type="Shader" uid="uid://yxmd07ffjd81" path="res://shaders/claudetoon.gdshader" id="107_t03r6"]
-[ext_resource type="Shader" uid="uid://b67yn2tvc7mdi" path="res://shaders/groktoon.gdshader" id="108_tr2ob"]
-[ext_resource type="Shader" uid="uid://b2md3x8kk504f" path="res://shaders/deepseektoon.gdshader" id="109_vx6vg"]
-[ext_resource type="Shader" uid="uid://cno3mpem8ufv0" path="res://shaders/gemini_ink.gdshader" id="110_t74cf"]
-[ext_resource type="Shader" uid="uid://bkx4ru8pmf1l4" path="res://shaders/gemini_paint.gdshader" id="111_yql7t"]
-[ext_resource type="Shader" uid="uid://dpb32jil4ntxy" path="res://shaders/geminiwood.gdshader" id="112_qils1"]
-[ext_resource type="Shader" uid="uid://vvpopc15352" path="res://shaders/texture_demo.gdshader" id="113_b4nch"]
-[ext_resource type="Shader" uid="uid://bygmpnnfsxop6" path="res://shaders/texturedemo.gdshader" id="115_ge2r7"]
 [ext_resource type="Shader" uid="uid://brdm2rk7i0rpw" path="res://shaders/halo.gdshader" id="115_lsji5"]
 [ext_resource type="Shader" uid="uid://d3o1pml8loixh" path="res://shaders/style_shadow.gdshader" id="118_ff35p"]
 [ext_resource type="Shader" uid="uid://bfj3k2kc5ytg7" path="res://shaders/test_paint.gdshader" id="118_kfydb"]
 [ext_resource type="Texture2D" uid="uid://b0ltamrwqx53s" path="res://shaders/textures/paint_packed.png" id="119_c0jmw"]
-[ext_resource type="PackedScene" uid="uid://def4xv43b6dxn" path="res://scenes/tree.tscn" id="119_iahig"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fr1sm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -136,145 +21,32 @@ ambient_light_color = Color(0.60784316, 0.75686276, 0.9254902, 1)
 ambient_light_sky_contribution = 0.17
 tonemap_mode = 2
 
-[sub_resource type="BoxMesh" id="BoxMesh_m0rpm"]
-size = Vector3(10, 1, 10)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4t00o"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yt2qc"]
 render_priority = 0
-shader = ExtResource("105_0enbf")
-shader_parameter/albedo = Color(0.18352133, 0.40141898, 0.51794314, 1)
-shader_parameter/cuts = 5.0
-shader_parameter/wrap = 0.0
-shader_parameter/steer = 0.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4t00o"]
-next_pass = SubResource("ShaderMaterial_4t00o")
-albedo_color = Color(0.1989873, 0.35007602, 0.5365526, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_du12e"]
-material = SubResource("StandardMaterial3D_4t00o")
-
-[sub_resource type="SphereMesh" id="SphereMesh_yyinu"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k73vd"]
-render_priority = 0
-shader = ExtResource("106_qbofj")
-shader_parameter/albedo_color = Color(0, 0.5561579, 0.2682777, 1)
-shader_parameter/light_steps = 4
-shader_parameter/shadow_strength = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_4t00o"]
-material = SubResource("ShaderMaterial_k73vd")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yyinu"]
-render_priority = 0
-shader = ExtResource("107_t03r6")
-shader_parameter/albedo = Color(0.6569794, 0.38081473, 0.12031824, 1)
-shader_parameter/toon_levels = 5
-shader_parameter/toon_smoothness = 0.5550000263625
-shader_parameter/use_rim = true
-shader_parameter/rim_color = Color(1, 1, 1, 1)
-shader_parameter/rim_size = 0.5
-shader_parameter/rim_smoothness = 0.1
-shader_parameter/use_specular = true
-shader_parameter/specular_color = Color(1, 1, 1, 1)
-shader_parameter/specular_size = 0.8630000409925
-shader_parameter/specular_smoothness = 0.05
-shader_parameter/specular_strength = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_g1wrk"]
-material = SubResource("ShaderMaterial_yyinu")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g1wrk"]
-render_priority = 0
-shader = ExtResource("108_tr2ob")
-shader_parameter/albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
-shader_parameter/rim_threshold = 0.02
-shader_parameter/rim_softness = 0.015
-shader_parameter/specular_shininess = 60.0
-shader_parameter/specular_threshold = 0.06
-shader_parameter/specular_softness = 0.15
-
-[sub_resource type="SphereMesh" id="SphereMesh_kwhll"]
-material = SubResource("ShaderMaterial_g1wrk")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kwhll"]
-shader = ExtResource("109_vx6vg")
-shader_parameter/edge_threshold = 0.01
-shader_parameter/edge_color = Color(0, 0, 0, 1)
-shader_parameter/color_reduction = 4
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_kwhll"]
-noise_type = 3
-frequency = 0.02
-fractal_type = 0
-domain_warp_enabled = true
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_155mn"]
-noise = SubResource("FastNoiseLite_kwhll")
-seamless = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_155mn"]
-render_priority = 0
-shader = ExtResource("110_t74cf")
-shader_parameter/ink_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/flow_noise = SubResource("NoiseTexture2D_155mn")
-
-[sub_resource type="SphereMesh" id="SphereMesh_155mn"]
-material = SubResource("ShaderMaterial_155mn")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_gc3ro"]
-noise_type = 0
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yonga"]
-noise = SubResource("FastNoiseLite_gc3ro")
-seamless = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nmrt8"]
-render_priority = 0
-shader = ExtResource("111_yql7t")
-shader_parameter/noise_tex = SubResource("NoiseTexture2D_yonga")
-shader_parameter/color_1 = Color(0.1, 0.4, 0.8, 1)
-shader_parameter/color_2 = Color(0.8, 0.2, 0.5, 1)
-shader_parameter/bleed_strength = 0.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_gc3ro"]
-material = SubResource("ShaderMaterial_nmrt8")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_me0e3"]
-render_priority = 0
-shader = ExtResource("112_qils1")
-shader_parameter/emboss_height = 0.05
-
-[sub_resource type="SphereMesh" id="SphereMesh_yonga"]
-material = SubResource("ShaderMaterial_me0e3")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yonga"]
-render_priority = 0
-shader = ExtResource("113_b4nch")
-shader_parameter/color_a = Color(0.8, 0.3, 0.1, 1)
-shader_parameter/color_b = Color(0.9, 0.7, 0.1, 1)
-shader_parameter/bump_depth = 0.02
-shader_parameter/erosion_threshold = 0.5
+shader = ExtResource("118_kfydb")
+shader_parameter/albedo_texture = ExtResource("119_c0jmw")
+shader_parameter/glass_opacity = 1.0
+shader_parameter/is_sharp_geometry = false
+shader_parameter/paint_color_1 = Color(0.5972425, 0.27925846, 0.023226457, 1)
+shader_parameter/paint_color_2 = Color(0.96768576, 0.3963202, 0.45983332, 1)
+shader_parameter/bump_depth = 0.10000000149012
+shader_parameter/spec_color_1 = Color(0.42745805, 0.40006843, 0.14110908, 1)
+shader_parameter/spec_color_2 = Color(0.9683425, 0.6121258, 0.7780983, 1)
+shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/enable_occlusion = true
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
+shader_parameter/occlusion_offset = 0.0
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/rim_power = 5.0
+shader_parameter/rim_threshold = 0.05
+shader_parameter/curvature_epsilon = 1e-05
 
-[sub_resource type="SphereMesh" id="SphereMesh_me0e3"]
-material = SubResource("ShaderMaterial_yonga")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tkhg2"]
-render_priority = 0
-shader = ExtResource("115_ge2r7")
-shader_parameter/threshold = 0.5
-shader_parameter/blend_softness = 0.1
-shader_parameter/uv_scale = Vector2(1, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_sjuvy"]
-material = SubResource("ShaderMaterial_tkhg2")
+[sub_resource type="BoxMesh" id="BoxMesh_m0rpm"]
+material = SubResource("ShaderMaterial_yt2qc")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iw3tg"]
 render_priority = 0
@@ -284,6 +56,7 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/inflate_amount = 0.0
 shader_parameter/outline_offset = Vector3(0.02, -0.01, 0)
 shader_parameter/ring_thickness = 0.130000006175
+shader_parameter/is_sharp_geometry = false
 shader_parameter/rim_texture_scale = 2.0
 shader_parameter/erosion_threshold = 0.8170000388075
 
@@ -296,6 +69,7 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/inflate_amount = 0.0330000015675
 shader_parameter/outline_offset = Vector3(0, 0, 0)
 shader_parameter/ring_thickness = 0.1550000073625
+shader_parameter/is_sharp_geometry = false
 shader_parameter/rim_texture_scale = 2.0
 shader_parameter/erosion_threshold = 0.6690000317775
 
@@ -304,6 +78,8 @@ render_priority = 0
 next_pass = SubResource("ShaderMaterial_06khr")
 shader = ExtResource("118_kfydb")
 shader_parameter/albedo_texture = ExtResource("119_c0jmw")
+shader_parameter/glass_opacity = 1.0
+shader_parameter/is_sharp_geometry = false
 shader_parameter/paint_color_1 = Color(0.33331102, 5.5952e-07, 1.2032687e-07, 1)
 shader_parameter/paint_color_2 = Color(0.42067242, 0.031973913, 0, 1)
 shader_parameter/bump_depth = 0.10000000149012
@@ -325,6 +101,17 @@ shader_parameter/curvature_epsilon = 1e-05
 [sub_resource type="SphereMesh" id="SphereMesh_ibans"]
 material = SubResource("ShaderMaterial_krv6m")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ser01"]
+render_priority = 0
+shader = ExtResource("118_ff35p")
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
+shader_parameter/shadow_size = -0.881999994395
+shader_parameter/noise_strength = 2.0
+shader_parameter/texture_scale = Vector2(2, 2)
+
+[sub_resource type="SphereMesh" id="SphereMesh_j5s0i"]
+material = SubResource("ShaderMaterial_ser01")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r4inp"]
 render_priority = 0
 shader = ExtResource("115_lsji5")
@@ -333,6 +120,7 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/inflate_amount = 0.05
 shader_parameter/outline_offset = Vector3(0.02, -0.1, 0)
 shader_parameter/ring_thickness = 0.2000000095
+shader_parameter/is_sharp_geometry = false
 shader_parameter/rim_texture_scale = 2.0
 shader_parameter/erosion_threshold = 0.818000038855
 
@@ -345,6 +133,7 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/inflate_amount = 0.05
 shader_parameter/outline_offset = Vector3(0, 0, 0)
 shader_parameter/ring_thickness = 0.2
+shader_parameter/is_sharp_geometry = false
 shader_parameter/rim_texture_scale = 2.0
 shader_parameter/erosion_threshold = 0.8710000413725
 
@@ -353,6 +142,8 @@ render_priority = 0
 next_pass = SubResource("ShaderMaterial_eio4d")
 shader = ExtResource("118_kfydb")
 shader_parameter/albedo_texture = ExtResource("119_c0jmw")
+shader_parameter/glass_opacity = 1.0
+shader_parameter/is_sharp_geometry = false
 shader_parameter/paint_color_1 = Color(1.2032688e-06, 0.3968613, 0.3968613, 1)
 shader_parameter/paint_color_2 = Color(0.08257408, 0.2931866, 0.6323796, 1)
 shader_parameter/bump_depth = 0.10000000149012
@@ -385,26 +176,30 @@ shader_parameter/texture_scale = Vector2(2, 2)
 [sub_resource type="TorusMesh" id="TorusMesh_eio4d"]
 material = SubResource("ShaderMaterial_ungly")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ser01"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_70f2i"]
 render_priority = 0
-shader = ExtResource("118_ff35p")
+shader = ExtResource("115_lsji5")
 shader_parameter/erosion_texture = ExtResource("119_c0jmw")
-shader_parameter/shadow_size = -0.881999994395
-shader_parameter/noise_strength = 2.0
-shader_parameter/texture_scale = Vector2(2, 2)
-
-[sub_resource type="SphereMesh" id="SphereMesh_j5s0i"]
-material = SubResource("ShaderMaterial_ser01")
+shader_parameter/outline_color = Color(0, 1, 1, 1)
+shader_parameter/inflate_amount = 0.0950000045125
+shader_parameter/outline_offset = Vector3(0, 0, 0)
+shader_parameter/ring_thickness = 0.3130000148675
+shader_parameter/is_sharp_geometry = true
+shader_parameter/rim_texture_scale = 2.0
+shader_parameter/erosion_threshold = 0.79200003762
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1grei"]
 render_priority = 0
+next_pass = SubResource("ShaderMaterial_70f2i")
 shader = ExtResource("118_kfydb")
 shader_parameter/albedo_texture = ExtResource("119_c0jmw")
-shader_parameter/paint_color_1 = Color(0.39184618, 0.4686892, 0.46909565, 1)
-shader_parameter/paint_color_2 = Color(0.09563463, 0.13480434, 0.13485238, 1)
+shader_parameter/glass_opacity = 1.0
+shader_parameter/is_sharp_geometry = true
+shader_parameter/paint_color_1 = Color(0.6020993, 0.2791662, 0.75362486, 1)
+shader_parameter/paint_color_2 = Color(0.22989243, 1.9168072e-05, 0.20965031, 1)
 shader_parameter/bump_depth = 0.10000000149012
-shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
-shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
+shader_parameter/spec_color_1 = Color(0.1376554, 0.3239493, 0.8674832, 1)
+shader_parameter/spec_color_2 = Color(0.4106403, 0.79395396, 0.9539643, 1)
 shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
 shader_parameter/occlusion_power = 2.0
@@ -412,6 +207,7 @@ shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
 shader_parameter/occlusion_offset = 1.0
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
 shader_parameter/rim_texture_scale = 2.0
 shader_parameter/rim_power = 5.0
 shader_parameter/rim_threshold = 0.05
@@ -420,13 +216,16 @@ shader_parameter/curvature_epsilon = 1e-05
 [sub_resource type="BoxMesh" id="BoxMesh_76e1c"]
 material = SubResource("ShaderMaterial_1grei")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3e2s7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bh7e2"]
 render_priority = 0
 shader = ExtResource("118_kfydb")
-shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
-shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
-shader_parameter/bump_depth = 0.02
-shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
+shader_parameter/albedo_texture = ExtResource("119_c0jmw")
+shader_parameter/glass_opacity = 1.0
+shader_parameter/is_sharp_geometry = false
+shader_parameter/paint_color_1 = Color(0.99607843, 0.27450982, 0, 1)
+shader_parameter/paint_color_2 = Color(0.4, 0.627451, 0.23529412, 1)
+shader_parameter/bump_depth = 0.10000000149012
+shader_parameter/spec_color_1 = Color(1, 0.6255452, 0.45191997, 1)
 shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
 shader_parameter/reflection_intensity = 0.5
 shader_parameter/occlusion_radius = 1.0
@@ -434,541 +233,48 @@ shader_parameter/occlusion_power = 2.0
 shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
 shader_parameter/erosion_min = 0.25
 shader_parameter/erosion_max = 0.5
-shader_parameter/occlusion_offset = 1.0
+shader_parameter/occlusion_offset = 0.0
+shader_parameter/erosion_texture = ExtResource("119_c0jmw")
 shader_parameter/rim_texture_scale = 2.0
 shader_parameter/rim_power = 5.0
 shader_parameter/rim_threshold = 0.05
 shader_parameter/curvature_epsilon = 1e-05
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lsji5"]
-render_priority = 0
-shader = ExtResource("118_kfydb")
-shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
-shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
-shader_parameter/bump_depth = 0.02
-shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
-shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
-shader_parameter/reflection_intensity = 0.5
-shader_parameter/occlusion_radius = 1.0
-shader_parameter/occlusion_power = 2.0
-shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/erosion_min = 0.25
-shader_parameter/erosion_max = 0.5
-shader_parameter/occlusion_offset = 1.0
-shader_parameter/rim_texture_scale = 2.0
-shader_parameter/rim_power = 5.0
-shader_parameter/rim_threshold = 0.05
-shader_parameter/curvature_epsilon = 1e-05
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ff35p"]
-render_priority = 0
-shader = ExtResource("118_kfydb")
-shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
-shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
-shader_parameter/bump_depth = 2.465
-shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
-shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
-shader_parameter/reflection_intensity = 0.5
-shader_parameter/occlusion_radius = 1.0
-shader_parameter/occlusion_power = 2.0
-shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/erosion_min = 0.25
-shader_parameter/erosion_max = 0.5
-shader_parameter/occlusion_offset = 1.0
-shader_parameter/rim_texture_scale = 2.0
-shader_parameter/rim_power = 5.0
-shader_parameter/rim_threshold = 0.05
-shader_parameter/curvature_epsilon = 1e-05
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c0jmw"]
-render_priority = 0
-shader = ExtResource("118_kfydb")
-shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
-shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
-shader_parameter/bump_depth = 2.465
-shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
-shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
-shader_parameter/reflection_intensity = 0.5
-shader_parameter/occlusion_radius = 1.0
-shader_parameter/occlusion_power = 2.0
-shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/erosion_min = 0.25
-shader_parameter/erosion_max = 0.5
-shader_parameter/occlusion_offset = 1.0
-shader_parameter/rim_texture_scale = 2.0
-shader_parameter/rim_power = 5.0
-shader_parameter/rim_threshold = 0.05
-shader_parameter/curvature_epsilon = 1e-05
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_w2omh"]
-render_priority = 0
-shader = ExtResource("118_kfydb")
-shader_parameter/paint_color_1 = Color(0.8, 0.85, 0.85, 1)
-shader_parameter/paint_color_2 = Color(0.4, 0.5, 0.5, 1)
-shader_parameter/bump_depth = 2.465
-shader_parameter/spec_color_1 = Color(0.64, 0.26, 0, 1)
-shader_parameter/spec_color_2 = Color(1, 0.65, 0.23, 1)
-shader_parameter/reflection_intensity = 0.5
-shader_parameter/occlusion_radius = 1.0
-shader_parameter/occlusion_power = 2.0
-shader_parameter/occlusion_color = Color(0.05, 0.05, 0.1, 1)
-shader_parameter/erosion_min = 0.25
-shader_parameter/erosion_max = 0.5
-shader_parameter/occlusion_offset = 1.0
-shader_parameter/rim_texture_scale = 2.0
-shader_parameter/rim_power = 5.0
-shader_parameter/rim_threshold = 0.05
-shader_parameter/curvature_epsilon = 1e-05
+[sub_resource type="PrismMesh" id="PrismMesh_70f2i"]
+material = SubResource("ShaderMaterial_bh7e2")
 
 [node name="Demo" type="Node3D" unique_id=693633326]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1637183926]
 environment = SubResource("Environment_0bhed")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=787294679]
-transform = Transform3D(0.63192683, 0.05359623, 0.77317274, -0.6900243, 0.49314916, 0.52978337, -0.35289505, -0.8682922, 0.34861696, 21.033249, 2.588, 4.6145296)
-shadow_enabled = true
-directional_shadow_mode = 1
-directional_shadow_split_1 = 0.032
-
 [node name="floor" type="MeshInstance3D" parent="." unique_id=1088670193]
-transform = Transform3D(14.723501, 0, 0, 0, 0.5384937, 0, 0, 0, 17.369766, -0.009198666, 0.1345563, -0.06301522)
+transform = Transform3D(14.723501, 0, 0, 0, 0.5384937, 0, 0, 0, 17.369766, 30.012081, 0.1345563, 4.935956)
 mesh = SubResource("BoxMesh_m0rpm")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=830867424]
-transform = Transform3D(0.99774396, -0.0075998437, 0.06670328, 0.0020428805, 0.9965488, 0.08298456, -0.06710374, -0.08266107, 0.994316, 2.965551, 2.5580347, 10.166305)
-projection = 1
-size = 3.7800322
-
-[node name="assets" type="Node3D" parent="." unique_id=373135136]
-
-[node name="Bush_1_A_Color12" parent="assets" unique_id=1129133128 instance=ExtResource("1_ff35p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 1.4271994)
-
-[node name="Bush_1_B_Color12" parent="assets" unique_id=1042743490 instance=ExtResource("2_c0jmw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.346527, 0, 3.1261797)
-
-[node name="Bush_1_C_Color12" parent="assets" unique_id=146709608 instance=ExtResource("3_w2omh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.751099, 0, 12.188428)
-
-[node name="Bush_1_D_Color12" parent="assets" unique_id=1478430558 instance=ExtResource("4_06khr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.318472, 1.9073486e-06, -1.3807001)
-
-[node name="Bush_1_E_Color12" parent="assets" unique_id=1219505393 instance=ExtResource("5_iw3tg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.346947, 0, 13.669452)
-
-[node name="Bush_1_F_Color12" parent="assets" unique_id=1640586576 instance=ExtResource("6_ser01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.390991, -1.9073486e-06, 4.217905)
-
-[node name="Bush_1_G_Color12" parent="assets" unique_id=211951409 instance=ExtResource("7_j5s0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.726068, -1.9073486e-06, 6.592513)
-
-[node name="Bush_2_A_Color12" parent="assets" unique_id=1571701097 instance=ExtResource("8_ungly")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.863792, 0, -1.6434753)
-
-[node name="Bush_2_B_Color12" parent="assets" unique_id=1440950985 instance=ExtResource("9_eio4d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.737974, 0, 2.7574234)
-
-[node name="Bush_2_C_Color12" parent="assets" unique_id=402857307 instance=ExtResource("10_r4inp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.33843, 0, 14.792602)
-
-[node name="Bush_2_D_Color12" parent="assets" unique_id=1843484800 instance=ExtResource("11_bh7e2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.927008, -1.9073486e-06, 3.4516373)
-
-[node name="Bush_2_E_Color12" parent="assets" unique_id=365124793 instance=ExtResource("12_70f2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.669703, 0, 20.882202)
-
-[node name="Bush_2_F_Color12" parent="assets" unique_id=505989433 instance=ExtResource("13_86t5n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.112381, 0, 23.147755)
-
-[node name="Bush_3_A_Color12" parent="assets" unique_id=1175606050 instance=ExtResource("14_spioy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.831348, 0, 4.52478)
-
-[node name="Bush_3_B_Color12" parent="assets" unique_id=1156546669 instance=ExtResource("15_huhib")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.900015, -1.9073486e-06, -1.723855)
-
-[node name="Bush_3_C_Color12" parent="assets" unique_id=1106234653 instance=ExtResource("16_xhjcu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.184717, 0, 0.055665016)
-
-[node name="Bush_4_A_Color12" parent="assets" unique_id=777782735 instance=ExtResource("17_pp3oo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.728539, 0, 0.316324)
-
-[node name="Bush_4_B_Color12" parent="assets" unique_id=82161906 instance=ExtResource("18_i6jf4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.999538, -1.9073486e-06, 2.3259974)
-
-[node name="Bush_4_C_Color12" parent="assets" unique_id=987626313 instance=ExtResource("19_2op4w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.204, 0, 23.210747)
-
-[node name="Bush_4_D_Color12" parent="assets" unique_id=1349309850 instance=ExtResource("20_xa58o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.798662, 0, -1.6597576)
-
-[node name="Bush_4_E_Color12" parent="assets" unique_id=1859825897 instance=ExtResource("21_3glh0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.43831, -1.9073486e-06, 7.5423813)
-
-[node name="Bush_4_F_Color12" parent="assets" unique_id=174782624 instance=ExtResource("22_r80h8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.231823, 0, 18.548698)
-
-[node name="Grass_1_A_Color12" parent="assets" unique_id=895383664 instance=ExtResource("23_jh2pl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.386887, 0, -0.94353914)
-
-[node name="Grass_1_A_Singlesided_Color12" parent="assets" unique_id=1238717466 instance=ExtResource("24_nsstm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 1.4271994)
-
-[node name="Grass_1_B_Color12" parent="assets" unique_id=6267919 instance=ExtResource("25_x0vs4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 1.4271994)
-
-[node name="Grass_1_B_Singlesided_Color12" parent="assets" unique_id=1847889010 instance=ExtResource("26_s1pg1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 1.4271994)
-
-[node name="Grass_1_C_Color12" parent="assets" unique_id=876808657 instance=ExtResource("27_kopsx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.791655, 0, 2.0030932)
-
-[node name="Grass_1_C_Singlesided_Color12" parent="assets" unique_id=1148767871 instance=ExtResource("28_qt0rt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.83526, 0, 1.0324533)
-
-[node name="Grass_1_D_Color12" parent="assets" unique_id=246502177 instance=ExtResource("29_tqdb8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.942112, 0.21064556, 4.909587)
-
-[node name="Grass_1_D_Singlesided_Color12" parent="assets" unique_id=1847576071 instance=ExtResource("30_npt2p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.592283, 0.17675138, -2.3615081)
-
-[node name="Grass_1_Mesh2" parent="assets" unique_id=1528865640 instance=ExtResource("31_4j3p0")]
-transform = Transform3D(0.9994502, 0.016620232, -0.028688863, -0.016681848, 0.99985904, -0.0019096665, 0.028653078, 0.0023872142, 0.9995866, -24.034382, 0, 2.456081)
-
-[node name="Grass_1_SingleSided_Mesh2" parent="assets" unique_id=728863672 instance=ExtResource("32_kk5ht")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 1.4271994)
-
-[node name="Grass_2_A_Color12" parent="assets" unique_id=506280851 instance=ExtResource("33_7mnvs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.109285, 0, 1.7500396)
-
-[node name="Grass_2_A_Singlesided_Color12" parent="assets" unique_id=328161189 instance=ExtResource("34_xwaop")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.322792, 0, 0.67933154)
-
-[node name="Grass_2_B_Color12" parent="assets" unique_id=296280087 instance=ExtResource("35_1i7y5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.803867, 0, 3.3885238)
-
-[node name="Grass_2_B_Singlesided_Color12" parent="assets" unique_id=1081259096 instance=ExtResource("36_khvxo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 1.4271994)
-
-[node name="Grass_2_C_Color12" parent="assets" unique_id=1076712645 instance=ExtResource("37_4vnbs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.126932, 0, 7.009062)
-
-[node name="Grass_2_C_Singlesided_Color12" parent="assets" unique_id=1264502631 instance=ExtResource("38_10f00")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.486834, 0, -0.20768714)
-
-[node name="Grass_2_D_Color12" parent="assets" unique_id=1574928192 instance=ExtResource("39_onbtf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.655499, 0.23505211, 1.1278965)
-
-[node name="Grass_2_D_Singlesided_Color12" parent="assets" unique_id=286105365 instance=ExtResource("40_3wrvm")]
-transform = Transform3D(0.99990255, 0, 0.01396218, 0, 1, 0, -0.01396218, 0, 0.99990255, -23.456656, 0.1656053, 1.3641393)
-
-[node name="Grass_2_Mesh2" parent="assets" unique_id=855878766 instance=ExtResource("41_tkwvf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6274, 0, 3.0937545)
-
-[node name="Grass_2_SingleSided_Mesh2" parent="assets" unique_id=1622907680 instance=ExtResource("42_hyfdr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.190493, 0, 0.51590157)
-
-[node name="Rock_1_A_Color12" parent="assets" unique_id=598042473 instance=ExtResource("43_ft0ti")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.670986, 0, 2.4723272)
-
-[node name="Rock_1_B_Color12" parent="assets" unique_id=1654898067 instance=ExtResource("44_k5mna")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.676683, 0.14812231, -0.02498889)
-
-[node name="Rock_1_C_Color12" parent="assets" unique_id=1568057921 instance=ExtResource("45_h4a0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.730236, 0.22424471, 5.595459)
-
-[node name="Rock_1_D_Color12" parent="assets" unique_id=1104373674 instance=ExtResource("46_egl62")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.56617, 0, 3.9062061)
-
-[node name="Rock_1_E_Color12" parent="assets" unique_id=834401483 instance=ExtResource("47_kud4m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.78785, 0, 20.773228)
-
-[node name="Rock_1_F_Color12" parent="assets" unique_id=134142472 instance=ExtResource("48_h1wid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.357065, 0, 21.046291)
-
-[node name="Rock_1_G_Color12" parent="assets" unique_id=274231902 instance=ExtResource("49_v0cg6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.641283, -1.9073486e-06, 23.3591)
-
-[node name="Rock_1_H_Color12" parent="assets" unique_id=1184293828 instance=ExtResource("50_skpwj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.91375, 0, 3.4834814)
-
-[node name="Rock_1_I_Color12" parent="assets" unique_id=1400042816 instance=ExtResource("51_oevim")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.574696, 0, 19.77208)
-
-[node name="Rock_1_J_Color12" parent="assets" unique_id=712820102 instance=ExtResource("52_5go0h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.42367, 0, 16.683725)
-
-[node name="Rock_1_K_Color12" parent="assets" unique_id=230657913 instance=ExtResource("53_322w2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.768915, 0, 1.4271994)
-
-[node name="Rock_1_L_Color12" parent="assets" unique_id=1864201548 instance=ExtResource("54_qwx71")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.91969, 0, 14.198488)
-
-[node name="Rock_1_M_Color12" parent="assets" unique_id=73234288 instance=ExtResource("55_xluqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.453913, 0, 5.2502775)
-
-[node name="Rock_1_N_Color12" parent="assets" unique_id=1402476419 instance=ExtResource("56_6lmj5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.688549, 0, 23.159073)
-
-[node name="Rock_1_O_Color12" parent="assets" unique_id=2031774063 instance=ExtResource("57_s1lf2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.700375, 0, 11.72333)
-
-[node name="Rock_1_P_Color12" parent="assets" unique_id=1905382973 instance=ExtResource("58_fxf6s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.433297, 0, 18.570847)
-
-[node name="Rock_1_Q_Color12" parent="assets" unique_id=1457510540 instance=ExtResource("59_18yj3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.923813, 0, -10.77801)
-
-[node name="Rock_2_A_Color12" parent="assets" unique_id=1820062416 instance=ExtResource("60_me30b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 1.4271994)
-
-[node name="Rock_2_B_Color12" parent="assets" unique_id=1380153806 instance=ExtResource("61_1qb7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.432978, 0, -0.806262)
-
-[node name="Rock_2_C_Color12" parent="assets" unique_id=427819179 instance=ExtResource("62_fj71k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.671213, 0, 25.912762)
-
-[node name="Rock_2_D_Color12" parent="assets" unique_id=1825211018 instance=ExtResource("63_wluon")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.81135, 0, 19.696548)
-
-[node name="Rock_2_E_Color12" parent="assets" unique_id=716026270 instance=ExtResource("64_xso0c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.645569, 0, -3.996726)
-
-[node name="Rock_2_F_Color12" parent="assets" unique_id=1387008978 instance=ExtResource("65_8timj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.16055, 0, 9.394174)
-
-[node name="Rock_2_G_Color12" parent="assets" unique_id=1116850587 instance=ExtResource("66_t82t0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.383358, 0, 11.372375)
-
-[node name="Rock_2_H_Color12" parent="assets" unique_id=931078742 instance=ExtResource("67_jt7vt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.600098, 0, 20.34658)
-
-[node name="Rock_3_A_Color12" parent="assets" unique_id=1323341311 instance=ExtResource("68_m23un")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.95782, 0, 2.8922155)
-
-[node name="Rock_3_B_Color12" parent="assets" unique_id=1521997447 instance=ExtResource("69_020h2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.89319, 0.36470842, 0.3902707)
-
-[node name="Rock_3_C_Color12" parent="assets" unique_id=1840835247 instance=ExtResource("70_fqh4x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.657284, 0, 1.6263609)
-
-[node name="Rock_3_D_Color12" parent="assets" unique_id=683887779 instance=ExtResource("71_qi1wk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.546745, 0, 1.6948617)
-
-[node name="Rock_3_E_Color12" parent="assets" unique_id=192328147 instance=ExtResource("72_mobdm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.710484, 0, 2.525642)
-
-[node name="Rock_3_F_Color12" parent="assets" unique_id=640756832 instance=ExtResource("73_ktdl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.600859, 0, -0.24507356)
-
-[node name="Rock_3_G_Color12" parent="assets" unique_id=312600953 instance=ExtResource("74_ely3y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.686848, 0, 5.308918)
-
-[node name="Rock_3_H_Color12" parent="assets" unique_id=1397563619 instance=ExtResource("75_tffsd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.621183, 0, 16.858234)
-
-[node name="Rock_3_I_Color12" parent="assets" unique_id=1928137375 instance=ExtResource("76_rvxn7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.428665, 0, -6.392665)
-
-[node name="Rock_3_J_Color12" parent="assets" unique_id=1073405468 instance=ExtResource("77_qiv7w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.30698, 0, -6.715578)
-
-[node name="Rock_3_K_Color12" parent="assets" unique_id=1812213152 instance=ExtResource("78_aglsr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.905804, 0, 26.0527)
-
-[node name="Rock_3_L_Color12" parent="assets" unique_id=2044750099 instance=ExtResource("79_knsex")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.91211, 0, 6.698308)
-
-[node name="Rock_3_M_Color12" parent="assets" unique_id=1975968471 instance=ExtResource("80_r4rt8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.461197, 0, -6.820691)
-
-[node name="Rock_3_N_Color12" parent="assets" unique_id=2091823023 instance=ExtResource("81_s12he")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.264887, 0, 16.414478)
-
-[node name="Rock_3_O_Color12" parent="assets" unique_id=1555509986 instance=ExtResource("82_ooboh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.00721, 0, -14.13329)
-
-[node name="Rock_3_P_Color12" parent="assets" unique_id=358567544 instance=ExtResource("83_1p6oa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.052906, 0, 10.521285)
-
-[node name="Rock_3_Q_Color12" parent="assets" unique_id=1260265861 instance=ExtResource("84_ihewe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.535251, 0, 2.219613)
-
-[node name="Rock_3_R_Color12" parent="assets" unique_id=229081413 instance=ExtResource("85_xpdr1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.39167, 0, 15.238044)
-
-[node name="Tree_1_A_Color12" parent="assets" unique_id=355004800 instance=ExtResource("86_ufblq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.544918, 0, 8.59526)
-
-[node name="Tree_1_B_Color12" parent="assets" unique_id=695899949 instance=ExtResource("87_1rff7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 8.937499)
-
-[node name="Tree_1_C_Color12" parent="assets" unique_id=1929930948 instance=ExtResource("88_4x6af")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.889477, 0, 1.4271994)
-
-[node name="Tree_2_A_Color12" parent="assets" unique_id=1769828474 instance=ExtResource("89_6uh7x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.340523, 0, 15.901483)
-
-[node name="Tree_2_B_Color12" parent="assets" unique_id=1088726999 instance=ExtResource("90_p0am2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.079251, 0, 9.210885)
-
-[node name="Tree_2_C_Color12" parent="assets" unique_id=89025745 instance=ExtResource("91_7csys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.21913, 0, -9.946702)
-
-[node name="Tree_2_D_Color12" parent="assets" unique_id=1318771055 instance=ExtResource("92_jeln0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.925659, 0, 1.4271994)
-
-[node name="Tree_2_E_Color12" parent="assets" unique_id=1181517189 instance=ExtResource("93_6pxwx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.078531, 0, 1.4271994)
-
-[node name="Tree_3_A_Color12" parent="assets" unique_id=2094131404 instance=ExtResource("94_scxxp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.582949, 0, -11.382171)
-
-[node name="Tree_3_B_Color12" parent="assets" unique_id=1210986218 instance=ExtResource("95_kux2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, 16.753685)
-
-[node name="Tree_3_C_Color12" parent="assets" unique_id=1414783872 instance=ExtResource("96_fbafy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.279701, 0, 9.987321)
-
-[node name="Tree_4_A_Color12" parent="assets" unique_id=416209791 instance=ExtResource("97_bpc38")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.306595, 0, -3.1462603)
-
-[node name="Tree_4_B_Color12" parent="assets" unique_id=887905050 instance=ExtResource("98_b4wof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.219322, 0, 14.649943)
-
-[node name="Tree_4_C_Color12" parent="assets" unique_id=433118173 instance=ExtResource("99_b7snm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.836205, 0, -7.472789)
-
-[node name="Tree_Bare_1_A_Color12" parent="assets" unique_id=641289898 instance=ExtResource("100_gye5b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.169222, 0, 4.786807)
-
-[node name="Tree_Bare_1_B_Color12" parent="assets" unique_id=1634075339 instance=ExtResource("101_seew0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.944271, 0, 28.072433)
-
-[node name="Tree_Bare_1_C_Color12" parent="assets" unique_id=1369439491 instance=ExtResource("102_tffc4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1305485, 0, 26.629921)
-
-[node name="Tree_Bare_2_A_Color12" parent="assets" unique_id=1282610125 instance=ExtResource("103_3rib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.717915, 0, -3.3020716)
-
-[node name="Tree_Bare_2_B_Color12" parent="assets" unique_id=1766757892 instance=ExtResource("104_djhch")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.129766, 0, 5.963975)
-
-[node name="Toon Shaders" type="Node3D" parent="." unique_id=210131170]
-
-[node name="gemini" type="MeshInstance3D" parent="Toon Shaders" unique_id=1465272794]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9300985, 6.7156177)
-mesh = SubResource("SphereMesh_du12e")
-
-[node name="geminilabel" type="Label3D" parent="Toon Shaders" unique_id=1276403382]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.067945, 1.0611087, 6.8839183)
-text = "GEMINI
-"
-
-[node name="deepseek" type="MeshInstance3D" parent="Toon Shaders" unique_id=1359512015]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3908904, 1.9300985, 6.7156177)
-mesh = SubResource("SphereMesh_yyinu")
-
-[node name="deepseeklabel" type="Label3D" parent="Toon Shaders" unique_id=218389546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4588354, 1.0611087, 6.8839183)
-text = "DEEPSEEK"
-
-[node name="chatGPT" type="MeshInstance3D" parent="Toon Shaders" unique_id=273433174]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.849057, 1.9300985, 6.7156177)
-mesh = SubResource("SphereMesh_4t00o")
-
-[node name="chatGPTlabel" type="Label3D" parent="Toon Shaders" unique_id=1876135238]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.917002, 1.0611087, 6.8839183)
-text = "	CHATGPT"
-
-[node name="Claude" type="MeshInstance3D" parent="Toon Shaders" unique_id=1089708841]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2664204, 1.9300985, 6.7156177)
-mesh = SubResource("SphereMesh_g1wrk")
-
-[node name="Claudelabel" type="Label3D" parent="Toon Shaders" unique_id=1200102675]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.334366, 1.0611087, 6.8839183)
-text = "	Claude
-"
-
-[node name="Grok" type="MeshInstance3D" parent="Toon Shaders" unique_id=2112701772]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.521011, 1.9300985, 6.7156177)
-mesh = SubResource("SphereMesh_kwhll")
-
-[node name="Groklabel" type="Label3D" parent="Toon Shaders" unique_id=1210784146]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5889564, 1.0611087, 6.8839183)
-text = "Grok"
-
-[node name="brokedeepssekshader" type="CanvasLayer" parent="." unique_id=1675843129]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="brokedeepssekshader" unique_id=707474428]
-material = SubResource("ShaderMaterial_kwhll")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2047908982]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2, 7)
-mesh = SubResource("SphereMesh_155mn")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=94313165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.622256, 2, 7)
-mesh = SubResource("SphereMesh_gc3ro")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2143755571]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.361304, 2, 7)
-mesh = SubResource("SphereMesh_yonga")
-
-[node name="MeshInstfance3D4" type="MeshInstance3D" parent="." unique_id=1882601621]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.786215, 2, 6.991459)
-mesh = SubResource("SphereMesh_me0e3")
-
-[node name="MeshInstfance3D5" type="MeshInstance3D" parent="." unique_id=943944447]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.41236, 2, 6.991459)
-mesh = SubResource("SphereMesh_sjuvy")
-
-[node name="MeshInstfance3D6" type="MeshInstance3D" parent="." unique_id=692844929]
+[node name="Sphere" type="MeshInstance3D" parent="." unique_id=692844929]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.799059, 1.7882671, 6.9480214)
 cast_shadow = 0
 mesh = SubResource("SphereMesh_ibans")
 
-[node name="MeshInstfance3D9" type="MeshInstance3D" parent="." unique_id=1092393292]
+[node name="Sphere Shadow" type="MeshInstance3D" parent="Sphere" unique_id=324572227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008005142, 0, 0)
+cast_shadow = 3
+mesh = SubResource("SphereMesh_j5s0i")
+
+[node name="Donut" type="MeshInstance3D" parent="." unique_id=1092393292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.22649, 1.7882671, 6.9480214)
 cast_shadow = 0
 mesh = SubResource("TorusMesh_ungly")
 
-[node name="MeshInstfance3D10" type="MeshInstance3D" parent="." unique_id=895084548]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.22649, 1.7882671, 6.9480214)
+[node name="Donut Shadow" type="MeshInstance3D" parent="Donut" unique_id=895084548]
 cast_shadow = 3
 mesh = SubResource("TorusMesh_eio4d")
 
-[node name="MeshInstfance3D8" type="MeshInstance3D" parent="." unique_id=324572227]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.791054, 1.7882671, 6.9480214)
-cast_shadow = 3
-mesh = SubResource("SphereMesh_j5s0i")
-
-[node name="MeshInstfance3D7" type="MeshInstance3D" parent="." unique_id=1489976106]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.491123, 2, 6.991459)
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=1489976106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.764845, 2, 6.991459)
 mesh = SubResource("BoxMesh_76e1c")
 
-[node name="Sketchfab_Scene3" parent="." unique_id=416247625 instance=ExtResource("119_iahig")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 24.76292, 0, 4.261871)
-
-[node name="oak 01_leafes_Mat_001_0" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01" parent_id_path=PackedInt32Array(416247625, 1580019247) index="0" unique_id=1580609555]
-surface_material_override/0 = SubResource("ShaderMaterial_3e2s7")
-
-[node name="oak 01_leafes_Mat_001_02" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01" parent_id_path=PackedInt32Array(416247625, 1580019247) index="1" unique_id=668661669]
-surface_material_override/0 = SubResource("ShaderMaterial_lsji5")
-
-[node name="oak 01_001_trunk_Mat_001_0" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(416247625, 1093063519) index="0" unique_id=1259965424]
-surface_material_override/0 = SubResource("ShaderMaterial_ff35p")
-
-[node name="oak 01_001_trunk_Mat_001_02" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(416247625, 1093063519) index="1" unique_id=1439971215]
-surface_material_override/0 = SubResource("ShaderMaterial_c0jmw")
-
-[node name="oak 01_001_trunk_Mat_001_03" parent="Sketchfab_Scene3/Sketchfab_model/e4a9b945b60a47099b7ed8ca539f430a_fbx/RootNode/oak 01_001" parent_id_path=PackedInt32Array(416247625, 1093063519) index="2" unique_id=1032768390]
-surface_material_override/0 = SubResource("ShaderMaterial_w2omh")
-
-[editable path="Sketchfab_Scene3"]
+[node name="Pyramid" type="MeshInstance3D" parent="." unique_id=1705573632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.50491, 1.7531466, 7.051186)
+mesh = SubResource("PrismMesh_70f2i")
